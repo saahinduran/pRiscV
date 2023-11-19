@@ -7,8 +7,8 @@ entity datapath is
 
 port(
     clock_in : in std_logic;
-    AluResult : out std_logic_vector(31 downto 0);
-    Memout : out std_logic_vector(31 downto 0);
+    --AluResult : out std_logic_vector(31 downto 0);
+    Memout : out std_logic_vector(5 downto 0);
     CntrlRegWrite : out std_logic
 );
 
@@ -28,19 +28,22 @@ signal Rs2Out		: std_logic_vector(31 downto 0):= "000000000000000000000000000000
 signal Result       : std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
 signal ImmOut 		: std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
 signal ImmSrc       : std_logic_vector(2 downto 0) := "000";
-signal AluIn		: std_logic_vector (31 downto 0):= "00000000000000000000000000000000"; 
+signal Alu1In		: std_logic_vector (31 downto 0):= "00000000000000000000000000000000"; 
+signal Alu2In		: std_logic_vector (31 downto 0):= "00000000000000000000000000000000"; 
 signal AluControl   : std_logic_vector (2 downto 0) := "000";  
 signal AluOut       : std_logic_vector (31 downto 0):= "00000000000000000000000000000000";
-signal N,Z,C,V		: std_logic;
+signal N,Z,C,V		: std_logic := '0';
 signal PcSrc		: std_logic;
-signal ResultSrc    : std_logic;
+signal ResultSrc    : std_logic_vector(2 downto 0) := "000";
 signal MemWrite     : std_logic; 
 signal AluSrc       : std_logic; 
 signal RegWrite     : std_logic := '0';
 
 signal ReadData     : std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
 signal Nreset		: std_logic := '0';
-
+signal PcSource		: std_logic := '0';
+signal MemWriteData : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+signal WriteWidth 	: std_logic_vector(1 downto 0) := "00";
 
 
 
@@ -95,11 +98,12 @@ component control_unit is
 			 --OUTPUTS:
 			
 			PcSrc		 :out std_logic;
-			ResultSrc    :out std_logic;
+			ResultSrc    :out std_logic_vector(2 downto 0) := "000";
 			MemWrite     :out std_logic; -- 0  means do not write to mem, 1 means write
 			AluControl   :out std_logic_vector(2 downto 0);
 			AluSrc       :out std_logic;  -- 0  means take register, 1 means immediate
 			ImmSrc       :out std_logic_vector(2 downto 0);
+			WriteWidth 	 :out std_logic_vector(1 downto 0) := "00";
 			RegWrite     :out std_logic
 			
 			
@@ -125,7 +129,8 @@ component data_memory is
 			DataIn		: in std_logic_vector(31 downto 0);
 			WriteEn		: in std_logic;
 			 --OUTPUTS:
-			ReadData	: out std_logic_vector(31 downto 0)
+			ReadData	: out std_logic_vector(31 downto 0);
+			LedOut 		: out std_logic_vector(5 downto 0)
 	);
 end component;
 
@@ -168,8 +173,8 @@ ImmOut   	 => ImmOut
 
 myALU: ALU 
 port map(
-Rs1		 	=> Rs1Out,
-Rs2        	=> AluIn,
+Rs1		 	=> Alu1In,
+Rs2        	=> Alu2In,
 AluControl 	=> AluControl, 
 AluOut     	=> AluOut,     
 N	        => N,
@@ -194,6 +199,7 @@ MemWrite     => MemWrite    ,
 AluControl   => AluControl  ,
 AluSrc       => AluSrc      ,
 ImmSrc       => ImmSrc      ,
+WriteWidth 	 => WriteWidth  ,
 RegWrite     => RegWrite    
 );
 
@@ -202,10 +208,11 @@ DataMemory : data_memory
 port map(
 Clk			=> Clk,
 Address		=> AluOut(11 downto 0),
-DataIn		=> Rs2Out,
+DataIn		=> MemWriteData,
 WriteEn		=> MemWrite,
 --OUTPUTS:
-ReadData	=> ReadData
+ReadData	=> ReadData,
+LedOut      => Memout
 );
 
 
@@ -221,16 +228,37 @@ end if;
 end if;
 end process;
 
-PCTarget <= PC + ImmOut;
+PCTarget <= Rs1Out + ImmOut when Instruction(6 downto 0) = "1100111" else -- when instruction is JALR
+			PC + ImmOut;
+			
 
-AluIn <= Rs2Out when AluSrc = '0' else
+Alu2In <= Rs2Out when AluSrc = '0' else
 		 ImmOut;
 		 
-Result <= ReadData when ResultSrc = '1' else
+Alu1In <= PC when Instruction(6 downto 0) = "0010111" else	
+		  Rs1Out;
+		 
+Result <= ReadData when ResultSrc = "001" else
+		  PCNext   when ResultSrc = "010" else
+		  ( (31 downto 8 => ReadData(31)) & ReadData(7 downto 0)) when ResultSrc = "011" 	else --load byte
+		  ( (31 downto 16 => ReadData(31)) & ReadData(15 downto 0)) when ResultSrc = "100" 	else -- load halfword
+		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "101" 			else -- load byte u
+		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "110" 			else -- load halfword u
 		  AluOut;
+		   
+		  
+MemWriteData <= (31 downto 8 => '0') & Rs2Out(7 downto 0) 	when WriteWidth = "00" else
+				(31 downto 16 => '0') & Rs2Out(15 downto 0) when WriteWidth = "01" else
+				(31 downto 8 => '0') & Rs2Out(7 downto 0) 	when WriteWidth = "00" else
+				Rs2Out;
+
+
+
+
+
+
+
 PCNext <= PC + 4;		  
 clk <= clock_in;
-AluResult <= AluOut;
-Memout    <= ReadData;
 CntrlRegWrite  <= MemWrite;
 end riscV;

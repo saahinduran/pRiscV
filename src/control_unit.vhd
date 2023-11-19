@@ -15,11 +15,13 @@ entity control_unit is
 			 --OUTPUTS:
 			
 			PcSrc		 :out std_logic := '0';
-			ResultSrc    :out std_logic := '0';
+			ResultSrc    :out std_logic_vector(2 downto 0) := "000";
 			MemWrite     :out std_logic := '0'; -- 0  means do not write to mem, 1 means write
 			AluControl   :out std_logic_vector(2 downto 0) := "000";
 			AluSrc       :out std_logic := '0';  -- 0  means take register, 1 means immediate
 			ImmSrc       :out std_logic_vector(2 downto 0) := "000";
+			WriteWidth 	 :out std_logic_vector(1 downto 0) := "00";
+			
 			RegWrite     :out std_logic := '0'
 			
 			
@@ -44,25 +46,32 @@ constant JALR_TYPE  : std_logic_vector(6 downto 0) := "1100111";  -- 0x67 : JALR
 
 begin
 
-AluSrc     <= '0' when OpCode = R_TYPE else       -- Second operand of ALU comes from register only when instruction type is R.
+AluSrc     <= '0' when OpCode = R_TYPE or OpCode = B_TYPE else       -- Second operand of ALU comes from register only when instruction type is R.
 		      '1';
 
-ResultSrc  <= '1' when OpCode = LOAD_TYPE else	 -- Result of instruction comes from memory only when instruction type is LOAD_TYPE.
-			  '0';							     -- result source is ALU result otherwise.
+ResultSrc  <= "001" when OpCode = LOAD_TYPE and Funct3 ="010" else	 -- Result of instruction comes from memory only when instruction type is LOAD_TYPE.
+			  "010" when OpCode = JAL_TYPE or OpCode = JALR_TYPE else -- result source is basically PCnext; namely PC + 4
+			  "011" when OpCode = LOAD_TYPE and Funct3 = "000" else -- load byte
+			  "100" when OpCode = LOAD_TYPE and Funct3 = "001" else -- load halfword
+			  "101" when OpCode = LOAD_TYPE and Funct3 = "100" else -- load byte unsigned
+			  "110" when OpCode = LOAD_TYPE and Funct3 = "101" else -- load haldword unsigned
+			  
+			  
+			  "111";							     -- result source is ALU result otherwise.
 
 
 			 -- PC source selection; Pc including instructions cause 
 			 -- Pc to have a value different than PC + 4;
-PcSrc      <= '1' when OpCode = B_TYPE and Funct3= "000" and Z = '1'  			  else -- BEQ
-			  '1' when OpCode = B_TYPE and Funct3= "001" and Z = '0'  			  else -- BNE
-			  '1' when OpCode = B_TYPE and Funct3= "100" and N = '1' 			  else -- BLT
-			  '1' when OpCode = B_TYPE and Funct3= "101" and N = '0'			  else -- BGE
-			  '1' when OpCode = B_TYPE and Funct3= "110" and C = '1' 			  else -- BLTU
-			  '1' when OpCode = B_TYPE and Funct3= "111" and N = '0' and C = '0'  else -- BGEU
-			  '1' when OpCode = JAL_TYPE   			    else   
-			  '1' when OpCode = JALR_TYPE  			    else		
+PcSrc      <= '1'  when OpCode = B_TYPE and Funct3= "000" and Z = '1'  			  		else -- BEQ
+			  '1'  when OpCode = B_TYPE and Funct3= "001" and Z = '0'  			  		else -- BNE
+			  '1'  when OpCode = B_TYPE and Funct3= "100" and N = '1' and V ='0'			  		else -- BLT
+			  '1'  when OpCode = B_TYPE and Funct3= "101" and (N = '0' or Z = '0') and V='0'		else -- BGE
+			  '1'  when OpCode = B_TYPE and Funct3= "110" and C = '1' 			  		else -- BLTU -- TODO: verify
+			  '1'  when OpCode = B_TYPE and Funct3= "111" and N = '0' and C = '0'		else -- BGEU -- TODO: verify
+			  '1'  when OpCode = JAL_TYPE   			    else   
+			  '1'  when OpCode = JALR_TYPE  			    else		
 			  '0';
-			 
+			  
 			 	
 MemWrite   <= '1' when OpCode = STORE_TYPE else	 -- Memwrite signal is 1 only when executing STORE instruction
 			  '0';
@@ -102,7 +111,11 @@ AluControl <= "000" when OpCode = LUI_TYPE or OpCode = AUIPC_TYPE or
 			  "111" when ( (OpCode = I_TYPE or OpCode = R_TYPE) and (Funct3 ="101" and Funct7 ="0100000") )  else -- SRAI
 			  "000"; -- default AluControl is add.
 			  
+WriteWidth <= "00" 	when OpCode = STORE_TYPE and Funct3 = "000" else
+			  "01"  when OpCode = STORE_TYPE and Funct3 = "001" else
+			  "10"	when OpCode = STORE_TYPE and Funct3 = "010" else
+			  "00";
+			  
 			  
 
-							
 end control;

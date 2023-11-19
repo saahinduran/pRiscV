@@ -11,14 +11,16 @@ entity data_memory is
 			DataIn		: in std_logic_vector(31 downto 0);
 			WriteEn		: in std_logic;
 			 --OUTPUTS:
-			ReadData	: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000"
+			ReadData	: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+			LedOut 		: out std_logic_vector(5 downto 0)
+			
 	);
 end data_memory;
 
 architecture data_mem of data_memory is
 
 
-type RAM_ARRAY is array (0 to 4096 ) of std_logic_vector (31 downto 0);   ---TODO:Reduce here !!!!
+type RAM_ARRAY is array (0 to 31 ) of std_logic_vector (31 downto 0);   ---TODO:Reduce here !!!!
 signal ramArray :RAM_ARRAY := (others => "00000000000000000000000000000000");
 
 
@@ -43,5 +45,6 @@ end if;
 
 end process;
 --ReadData <= ramArray(to_integer(unsigned(Address)));
+LedOut <= ramArray(4)(5 downto 0);
 end data_mem;
 
