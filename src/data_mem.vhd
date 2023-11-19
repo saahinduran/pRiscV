@@ -20,7 +20,7 @@ end data_memory;
 architecture data_mem of data_memory is
 
 
-type RAM_ARRAY is array (0 to 31 ) of std_logic_vector (31 downto 0);   ---TODO:Reduce here !!!!
+type RAM_ARRAY is array (0 to 4095 ) of std_logic_vector (31 downto 0);   ---TODO:Reduce here !!!!
 signal ramArray :RAM_ARRAY := (others => "00000000000000000000000000000000");
 
 

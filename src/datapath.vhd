@@ -34,7 +34,7 @@ signal AluControl   : std_logic_vector (2 downto 0) := "000";
 signal AluOut       : std_logic_vector (31 downto 0):= "00000000000000000000000000000000";
 signal N,Z,C,V		: std_logic := '0';
 signal PcSrc		: std_logic;
-signal ResultSrc    : std_logic_vector(2 downto 0) := "000";
+signal ResultSrc    : std_logic_vector(3 downto 0) := "0000";
 signal MemWrite     : std_logic; 
 signal AluSrc       : std_logic; 
 signal RegWrite     : std_logic := '0';
@@ -98,7 +98,7 @@ component control_unit is
 			 --OUTPUTS:
 			
 			PcSrc		 :out std_logic;
-			ResultSrc    :out std_logic_vector(2 downto 0) := "000";
+			ResultSrc    :out std_logic_vector(3 downto 0) := "0000";
 			MemWrite     :out std_logic; -- 0  means do not write to mem, 1 means write
 			AluControl   :out std_logic_vector(2 downto 0);
 			AluSrc       :out std_logic;  -- 0  means take register, 1 means immediate
@@ -238,12 +238,14 @@ Alu2In <= Rs2Out when AluSrc = '0' else
 Alu1In <= PC when Instruction(6 downto 0) = "0010111" else	
 		  Rs1Out;
 		 
-Result <= ReadData when ResultSrc = "001" else
-		  PCNext   when ResultSrc = "010" else
-		  ( (31 downto 8 => ReadData(31)) & ReadData(7 downto 0)) when ResultSrc = "011" 	else --load byte
-		  ( (31 downto 16 => ReadData(31)) & ReadData(15 downto 0)) when ResultSrc = "100" 	else -- load halfword
-		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "101" 			else -- load byte u
-		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "110" 			else -- load halfword u
+Result <= ReadData when ResultSrc = "0001" else
+		  PCNext   when ResultSrc = "0010" else
+		  ( (31 downto 8 => ReadData(31)) & ReadData(7 downto 0)) when ResultSrc = "0011" 	else --load byte
+		  ( (31 downto 16 => ReadData(31)) & ReadData(15 downto 0)) when ResultSrc = "0100" 	else -- load halfword
+		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "0101" 			else -- load byte u
+		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "0110" 			else -- load halfword u
+		  ( (31 downto 1 => '0') & '1')  when ResultSrc = "1000" else   -- SLTI,SLT,SLTIU,SLTU satisfied
+		  (  31 downto 0 => '0'  	)  when ResultSrc = "0000" else	-- SLTI,SLT,SLTIU,SLTU not satisfied
 		  AluOut;
 		   
 		  

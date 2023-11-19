@@ -70,7 +70,9 @@ end process;
  
  
  AluOut <= aluResult; -- ALU out
- aluTemp <= ('0' & Rs1) + ('0' & Rs2);
+ aluTemp <= ('0' & Rs1) + ('0' & Rs2) when AluControl = "000" else
+			('0' & Rs1) - ('0' & Rs2) when AluControl = "001" else
+			('0' & Rs1) + ('0' & Rs2) ;
  
  C <= aluTemp(32); -- Carryout flag
  

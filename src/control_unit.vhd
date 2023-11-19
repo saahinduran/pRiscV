@@ -15,7 +15,7 @@ entity control_unit is
 			 --OUTPUTS:
 			
 			PcSrc		 :out std_logic := '0';
-			ResultSrc    :out std_logic_vector(2 downto 0) := "000";
+			ResultSrc    :out std_logic_vector(3 downto 0) := "0000";
 			MemWrite     :out std_logic := '0'; -- 0  means do not write to mem, 1 means write
 			AluControl   :out std_logic_vector(2 downto 0) := "000";
 			AluSrc       :out std_logic := '0';  -- 0  means take register, 1 means immediate
@@ -49,15 +49,17 @@ begin
 AluSrc     <= '0' when OpCode = R_TYPE or OpCode = B_TYPE else       -- Second operand of ALU comes from register only when instruction type is R.
 		      '1';
 
-ResultSrc  <= "001" when OpCode = LOAD_TYPE and Funct3 ="010" else	 -- Result of instruction comes from memory only when instruction type is LOAD_TYPE.
-			  "010" when OpCode = JAL_TYPE or OpCode = JALR_TYPE else -- result source is basically PCnext; namely PC + 4
-			  "011" when OpCode = LOAD_TYPE and Funct3 = "000" else -- load byte
-			  "100" when OpCode = LOAD_TYPE and Funct3 = "001" else -- load halfword
-			  "101" when OpCode = LOAD_TYPE and Funct3 = "100" else -- load byte unsigned
-			  "110" when OpCode = LOAD_TYPE and Funct3 = "101" else -- load haldword unsigned
-			  
-			  
-			  "111";							     -- result source is ALU result otherwise.
+ResultSrc  <= "0001" when OpCode = LOAD_TYPE and Funct3 ="010" else	 -- Result of instruction comes from memory only when instruction type is LOAD_TYPE.
+			  "0010" when OpCode = JAL_TYPE or OpCode = JALR_TYPE else -- result source is basically PCnext; namely PC + 4
+			  "0011" when OpCode = LOAD_TYPE and Funct3 = "000" else -- load byte
+			  "0100" when OpCode = LOAD_TYPE and Funct3 = "001" else -- load halfword
+			  "0101" when OpCode = LOAD_TYPE and Funct3 = "100" else -- load byte unsigned
+			  "0110" when OpCode = LOAD_TYPE and Funct3 = "101" else -- load haldword unsigned
+			  "1000" when (OpCode = I_TYPE or OpCode = R_TYPE) and
+						  ( (Funct3 = "010" and N = '1') or (Funct3 = "011" and C = '1') ) else -- SLTI,SLT,SLTIU,SLTU satisfied
+			  "0000" when (OpCode = I_TYPE or OpCode = R_TYPE) and
+						  ( (Funct3 = "010" and N = '0') or (Funct3 = "011" and C = '0') ) else -- SLTI,SLT,SLTIU,SLTU not satisfied
+			  "0111";							     -- result source is ALU result otherwise.
 
 
 			 -- PC source selection; Pc including instructions cause 
@@ -99,8 +101,9 @@ AluControl <= "000" when OpCode = LUI_TYPE or OpCode = AUIPC_TYPE or
 					OpCode = JAL_TYPE or OpCode = JALR_TYPE or OpCode = STORE_TYPE or OpCode = LOAD_TYPE
 					or (OpCode = R_TYPE and Funct7 ="0000000" and Funct3 ="000")					else -- default ADD , R-TYPE ADD
 			  "000" when OpCode = I_TYPE and Funct3 ="000"  else -- ADDI
-			  "001" when (OpCode = I_TYPE and Funct3 ="010") or (OpCode = R_TYPE and Funct7 ="0100000")  else -- SLTI
-			  "001" when OpCode = I_TYPE and Funct3 ="011"  else -- SLTIU
+			  "001" when (OpCode = I_TYPE and Funct3 ="010") or (OpCode = R_TYPE and Funct7 ="0100000") or
+						 (OpCode = R_TYPE and Funct3 ="010")									else -- SLTI,SLT
+			  "001" when (OpCode = I_TYPE and Funct3 ="011") or (OpCode = R_TYPE and Funct3 ="011") else -- SLTIU
 			  "001" when OpCode = B_TYPE  					else -- BEQ,BNE,BLT,BGE,BLTU,BGEU 
 
 			  "010" when (OpCode = I_TYPE or OpCode = R_TYPE) and Funct3 ="100"   else -- XORI
