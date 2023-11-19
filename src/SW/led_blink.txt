@@ -1,18 +1,10 @@
 ### LED BLINK ###
 
-004: 7A9FF0B7 : lui x1, 0x7A9FF000
-008: 03F00113 : addi x2,x0,63	
-00C: 03F14113 : xori x2,x2,63	
-010: 00202223 : sw x2,(4)x0 
-014: FFF08093 : addi x1,x1,-1
-018: 	      : bne x1,x0,-4
-01C:          : beq x1,x0,-8 
 
-
-03F00113              : addi x2,x0,63
-03F14113              : xori x2,x2,63
-00202223              : sw x2,(4)x0 
-008010B7              : lui x1, 0x7A9FF000
-FFF08093              : addi x1,x1,-1
-FE009EE3              : bne x1,x0,-4
-FF0086E3              : beq x1,x0,-20 
+004: 03F00113  : addi x2,x0,63
+008: 03F14113  : xori x2,x2,63
+00C: 00202223  : sw x2,(4)x0 
+010: 008010B7  : lui x1, 0x7A9FF000
+014: FFF08093  : addi x1,x1,-1
+018: FE009EE3  : bne x1,x0,-4
+01C: FF0086E3  : beq x1,x0,-20 
