@@ -1,0 +1,5 @@
+*.gao
+impl/
+*.gprj
+*.user
+src/new.vhd
