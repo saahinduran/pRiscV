@@ -20,9 +20,10 @@ architecture inst_mem of instruction_memory is
 type INST_ARRAY is array (0 to 1024 ) of std_logic_vector (31 downto 0);
 signal instMem :INST_ARRAY :=(x"00000000",
 
+x"20000193", --addi x3,x0,512
 x"03F00113", --addi x2,x0,63
 x"03F14113", --xori x2,x2,63
-x"00202223", --sw x2,(4)x0 
+x"0021A023", --sw x2,(0)x3 
 x"008010B7", --lui x1, 0x7A9FF000
 x"FFF08093", --addi x1,x1,-1
 x"FE009EE3", --bne x1,x0,-4

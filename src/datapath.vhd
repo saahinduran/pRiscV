@@ -9,7 +9,8 @@ port(
     clock_in : in std_logic;
     --AluResult : out std_logic_vector(31 downto 0);
     Memout : out std_logic_vector(5 downto 0);
-    CntrlRegWrite : out std_logic
+    CntrlRegWrite : out std_logic;
+	UartTx 		  : out std_logic
 );
 
 end datapath;
@@ -130,6 +131,7 @@ component data_memory is
 			WriteEn		: in std_logic;
 			 --OUTPUTS:
 			ReadData	: out std_logic_vector(31 downto 0);
+			UartTx		: out std_logic := '1';
 			LedOut 		: out std_logic_vector(5 downto 0)
 	);
 end component;
@@ -212,7 +214,9 @@ DataIn		=> MemWriteData,
 WriteEn		=> MemWrite,
 --OUTPUTS:
 ReadData	=> ReadData,
+UartTx		=> UartTx,
 LedOut      => Memout
+
 );
 
 
