@@ -12,3 +12,7 @@ Addition to version1 (not in version1 branch, the one in main branch),
 
 
 LEDs are not implemented. I am planning to implement a GPIO peripheral. I also plan it to be programmable as input and output and write an example program for it.
+
+Core is run on Sipeed Tang NANO 9k FPGA development board equipped with GOWIN 1NR-9 FPGA. Here is the output of the assembly program in src\SW\uart_tx_test.s
+:
+![image](https://github.com/saahinduran/pRiscV/assets/68019897/921c3725-e65b-42a4-be8a-9d801cf0db44)
