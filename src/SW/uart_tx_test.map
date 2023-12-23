@@ -1,0 +1,23 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000004 0x0000000000000400 xrw
+RAM              0x0000000000000000 0x0000000000000020 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD uart_tx_test.o
+
+.text           0x0000000000000004       0xc0
+ *(*.text)
+ .text          0x0000000000000004       0xc0 uart_tx_test.o
+                0x0000000000000004                _start
+OUTPUT(uart_tx_test.elf elf32-littleriscv)
+
+.data           0x00000000000000c4        0x0
+ .data          0x00000000000000c4        0x0 uart_tx_test.o
+
+.bss            0x00000000000000c4        0x0
+ .bss           0x00000000000000c4        0x0 uart_tx_test.o
