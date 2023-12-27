@@ -7,9 +7,11 @@ entity instruction_memory is
 	port(
 			 --INPUTS: --program counter must be wired to this port !
 			AddrIn		: in std_logic_vector(11 downto 0);
+			RomReadAddr : in std_logic_vector(11 downto 0);
 
 			 --OUTPUTS:
-			InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000"
+			InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+			RomReadData : out std_logic_vector(31 downto 0) := x"DEADBEEF"
 
 	);
 end instruction_memory;
@@ -56,6 +58,8 @@ process(AddrIn,instMem) is begin
 
 
 end process;
+
+RomReadData <= instMem(to_integer(unsigned(RomReadAddr(5 downto 0) ) ) );
 
 
 end inst_mem;

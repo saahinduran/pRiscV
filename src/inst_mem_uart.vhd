@@ -7,9 +7,11 @@ entity instruction_memory is
 	port(
 			 --INPUTS: --program counter must be wired to this port !
 			AddrIn		: in std_logic_vector(11 downto 0);
+			RomReadAddr : in std_logic_vector(11 downto 0);
 
 			 --OUTPUTS:
-			InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000"
+			InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+			RomReadData : out std_logic_vector(31 downto 0) := x"DEADBEEF"
 
 	);
 end instruction_memory;
@@ -17,63 +19,53 @@ end instruction_memory;
 architecture inst_mem of instruction_memory is
 
 
-type INST_ARRAY is array (0 to 8192 ) of std_logic_vector (31 downto 0);
+type INST_ARRAY is array (0 to 256 ) of std_logic_vector (31 downto 0);
 signal instMem :INST_ARRAY :=(x"00000000",
 
-x"10000193",
-x"10400213",
-x"10800293",
-x"00100113",
-x"0021a023",
-x"04800f93",
-x"0a00086f",
-x"0880086f",
-x"06500f93",
-x"0940086f",
-x"07c0086f",
-x"06c00f93",
-x"0880086f",
-x"0700086f",
-x"06c00f93",
-x"07c0086f",
-x"0640086f",
-x"06f00f93",
-x"0700086f",
-x"0580086f",
-x"02000f93",
-x"0640086f",
-x"04c0086f",
-x"07700f93",
-x"0580086f",
-x"0400086f",
-x"06f00f93",
-x"04c0086f",
-x"0340086f",
-x"07200f93",
-x"0400086f",
-x"0280086f",
-x"06c00f93",
-x"0340086f",
-x"01c0086f",
-x"06400f93",
-x"0280086f",
-x"0100086f",
-x"02100f93",
-x"01c0086f",
-x"0040086f",
-x"00022083",
-x"0020f093",
-x"fe009ce3",
-x"00080067",
-x"00000063",
-x"01f2a023",
-x"00080067",
 
+x"04000113",
+x"04000113",
+x"00000013",
+x"fe010113",
+x"00812e23",
+x"02010413",
+x"29000793",
+x"fef42623",
+x"10000793",
+x"00100713",
+x"00e7a023",
+x"0580006f",
+x"10800793",
+x"fec42703",
+x"00e7a023",
+x"fec42783",
+x"00178793",
+x"fef42623",
+x"10400793",
+x"0007a783",
+x"fef42423",
+x"fe842783",
+x"0017d793",
+x"0017f793",
+x"fef42423",
+x"00000013",
+x"fe842783",
+x"fc079ee3",
+x"00100793",
+x"fef42223",
+x"fe442783",
+x"00178793",
+x"fef42023",
+x"fec42783",
+x"0007c783",
+x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",x"00000013",
+x"fa0792e3",
+x"0000006f",
+x"6c6c6548",
+x"6f77206f",
+x"0a646c72",
+x"00000000",
 
-
-
-
--- these instructions alias to uart_tx_test.s
 
 
 
@@ -93,5 +85,5 @@ process(AddrIn,instMem) is begin
 
 end process;
 
-
+RomReadData <= instMem(to_integer(unsigned(RomReadAddr(5 downto 0) ) ) / 4);
 end inst_mem;

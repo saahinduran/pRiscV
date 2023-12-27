@@ -6,10 +6,10 @@ use ieee.std_logic_unsigned.all;
 entity datapath is
 
 port(
-    clock_in 	: in std_logic;
-	rst  		: in std_logic;
-    Memout 		: out std_logic_vector(5 downto 0);
-	uart_tx_o 	: out std_logic
+    clock_in 	: in std_logic := '1';
+	rst  		: in std_logic := '1';
+    Memout 		: out std_logic_vector(5 downto 0) := "000000";
+	uart_tx_o 	: out std_logic := '0'
 );
 
 end datapath;
@@ -21,7 +21,7 @@ signal PC			: std_logic_vector (31 downto 0) := "0000000000000000000000000000000
 signal PCNext		: std_logic_vector (31 downto 0) := "00000000000000000000000000000000";
 signal PCTarget		: std_logic_vector (31 downto 0) := "00000000000000000000000000000000";
 signal Instruction 	: std_logic_vector (31 downto 0) := "00000000000000000000000000000000";
-signal Clk 			: std_logic;
+signal Clk 			: std_logic := '0';
 signal WriteEn  	: std_logic := '0';
 signal Rs1Out		: std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
 signal Rs2Out		: std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
@@ -33,10 +33,10 @@ signal Alu2In		: std_logic_vector (31 downto 0):= "00000000000000000000000000000
 signal AluControl   : std_logic_vector (2 downto 0) := "000";  
 signal AluOut       : std_logic_vector (31 downto 0):= "00000000000000000000000000000000";
 signal N,Z,C,V		: std_logic := '0';
-signal PcSrc		: std_logic;
+signal PcSrc		: std_logic := '0';
 signal ResultSrc    : std_logic_vector(3 downto 0) := "0000";
-signal MemWrite     : std_logic; 
-signal AluSrc       : std_logic; 
+signal MemWrite     : std_logic := '0'; 
+signal AluSrc       : std_logic := '0'; 
 signal RegWrite     : std_logic := '0';
 
 signal ReadData     : std_logic_vector(31 downto 0):= "00000000000000000000000000000000";
@@ -44,6 +44,7 @@ signal PcSource		: std_logic := '0';
 signal MemWriteData : std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 signal WriteWidth 	: std_logic_vector(1 downto 0) := "00";
 signal Reset 		: std_logic:='1';
+signal ByteEn       :  std_logic_vector(1 downto 0):="00";
 
 
 
@@ -139,8 +140,12 @@ component peripherals is
 	Address		: in std_logic_vector(11 downto 0);	
 	DataIn		: in std_logic_vector(31 downto 0);
 	WriteEn		: in std_logic;
+	AddrIn		: in std_logic_vector(11 downto 0); -- PC ADDRESS / ROM ADDRESS 
+	ByteEn      : in std_logic_vector(1 downto 0);
+
 	 --OUTPUTS:
 	ReadData	: out std_logic_vector(31 downto 0);
+	InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 	UART_TX		: out std_logic:= '1'
 	);
 end component;
@@ -150,12 +155,7 @@ end component;
 
 begin
 Reset <= rst;
-InstMem : instruction_memory 
-port map(
 
-AddrIn		=> PC(11 downto 0),
-InstOut		=> Instruction
-);
 
 
 RegisterFile : register_file 
@@ -210,7 +210,7 @@ MemWrite     => MemWrite    ,
 AluControl   => AluControl  ,
 AluSrc       => AluSrc      ,
 ImmSrc       => ImmSrc      ,
-WriteWidth 	 => WriteWidth  ,
+WriteWidth 	 => ByteEn  ,
 RegWrite     => RegWrite    
 );
 
@@ -223,8 +223,11 @@ Clk			=> Clk,
 Address		=> AluOut(11 downto 0),  
 DataIn		=> MemWriteData,
 WriteEn		=> MemWrite,
+AddrIn		=> PC(11 downto 0),
+ByteEn		=> ByteEn,
  --OUTPUTS: =>         
 ReadData	=> ReadData,
+InstOut		=> Instruction,
 UART_TX		=> uart_tx_o   
 
 );
@@ -257,8 +260,8 @@ Alu1In <= PC when Instruction(6 downto 0) = "0010111" else
 		 
 Result <= ReadData when ResultSrc = "0001" else
 		  PCNext   when ResultSrc = "0010" else
-		  ( (31 downto 8 => ReadData(31)) & ReadData(7 downto 0)) when ResultSrc = "0011" 	else --load byte
-		  ( (31 downto 16 => ReadData(31)) & ReadData(15 downto 0)) when ResultSrc = "0100" 	else -- load halfword
+		  ( (31 downto 8 => ReadData(7)) & ReadData(7 downto 0)) when ResultSrc = "0011" 	else --load byte
+		  ( (31 downto 16 => ReadData(7)) & ReadData(15 downto 0)) when ResultSrc = "0100" 	else -- load halfword
 		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "0101" 			else -- load byte u
 		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "0110" 			else -- load halfword u
 		  ( (31 downto 1 => '0') & '1')  when ResultSrc = "1000" else   -- SLTI,SLT,SLTIU,SLTU satisfied
@@ -266,9 +269,9 @@ Result <= ReadData when ResultSrc = "0001" else
 		  AluOut;
 		   
 		  
-MemWriteData <= (31 downto 8 => '0') & Rs2Out(7 downto 0) 	when WriteWidth = "00" else
-				(31 downto 16 => '0') & Rs2Out(15 downto 0) when WriteWidth = "01" else
-				(31 downto 8 => '0') & Rs2Out(7 downto 0) 	when WriteWidth = "00" else
+MemWriteData <= (31 downto 8 => '0') & Rs2Out(7 downto 0) 	when ByteEn = "00" else
+				(31 downto 16 => '0') & Rs2Out(15 downto 0) when ByteEn = "01" else
+				(31 downto 8 => '0') & Rs2Out(7 downto 0) 	when ByteEn = "00" else
 				Rs2Out;
 
 

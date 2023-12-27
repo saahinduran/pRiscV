@@ -1,0 +1,80 @@
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+FLASH            0x0000000000000200 0x0000000000000400 xrw
+RAM              0x0000000000000000 0x0000000000000040 rw
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD main.o
+
+.text           0x0000000000000200       0xa0
+                0x0000000000000200                _start_text = .
+                0x0000000000000200                . = ORIGIN (FLASH)
+ *(.init)
+ .init          0x0000000000000200        0x8 main.o
+                0x0000000000000200                _start
+                0x0000000000000208                _start_vector = .
+ *(.isr_vector)
+ *(.text*)
+ .text          0x0000000000000208       0x88 main.o
+                0x0000000000000208                main
+ *(.rodata*)
+ .rodata        0x0000000000000290        0xd main.o
+                0x00000000000002a0                . = ALIGN (0x4)
+ *fill*         0x000000000000029d        0x3 
+                0x00000000000002a0                _end_text = .
+                0x00000000000002a0                _stored_data = .
+
+.rela.dyn       0x00000000000002a0        0x0
+ .rela.init     0x00000000000002a0        0x0 main.o
+
+.data           0x0000000000000000        0x0 load address 0x00000000000002a0
+                0x0000000000000000                _start_data = .
+ *(.data*)
+ .data          0x0000000000000000        0x0 main.o
+                0x0000000000000010                _global_pointer = (. + 0x10)
+ *(.sdata*)
+                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000000000                _end_data = .
+
+.bss            0x0000000000000000        0x0 load address 0x00000000000002a0
+                0x0000000000000000                _start_bss = .
+ *(.bss*)
+ .bss           0x0000000000000000        0x0 main.o
+ *(COMMON)
+                0x0000000000000000                . = ALIGN (0x4)
+                0x0000000000000000                _end_bss = .
+                0x0000000000000000                _end = .
+                [!provide]                        PROVIDE (_start_heap = _end)
+                0x0000000000000040                PROVIDE (_end_stack = (ORIGIN (RAM) + LENGTH (RAM)))
+OUTPUT(main.elf elf32-littleriscv)
+
+.debug_info     0x0000000000000000      0x11b
+ .debug_info    0x0000000000000000      0x11b main.o
+
+.debug_abbrev   0x0000000000000000       0xaa
+ .debug_abbrev  0x0000000000000000       0xaa main.o
+
+.debug_aranges  0x0000000000000000       0x28
+ .debug_aranges
+                0x0000000000000000       0x28 main.o
+
+.debug_ranges   0x0000000000000000       0x18
+ .debug_ranges  0x0000000000000000       0x18 main.o
+
+.debug_line     0x0000000000000000      0x1ae
+ .debug_line    0x0000000000000000      0x1ae main.o
+
+.debug_str      0x0000000000000000       0xe2
+ .debug_str     0x0000000000000000       0xe2 main.o
+                                        0x127 (size before relaxing)
+
+.comment        0x0000000000000000       0x39
+ .comment       0x0000000000000000       0x39 main.o
+                                         0x3a (size before relaxing)
+
+.debug_frame    0x0000000000000000       0x3c
+ .debug_frame   0x0000000000000000       0x3c main.o

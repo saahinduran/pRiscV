@@ -10,8 +10,12 @@ port(
 	Address		: in std_logic_vector(11 downto 0);	
 	DataIn		: in std_logic_vector(31 downto 0);
 	WriteEn		: in std_logic;
+	AddrIn		: in std_logic_vector(11 downto 0); -- PC ADDRESS / ROM ADDRESS 
+    ByteEn      : in std_logic_vector(1 downto 0);
+
 	 --OUTPUTS:
-	ReadData	: out std_logic_vector(31 downto 0);
+	ReadData	: out std_logic_vector(31 downto 0) :=x"DEADBEEF";
+	InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 	UART_TX		: out std_logic:= '1'
 );
 
@@ -24,6 +28,8 @@ architecture perip of peripherals is
 signal uartReadDataInterim : std_logic_vector(11  downto 0);
 signal uartAddressInterim  : std_logic_vector(11 downto 0);
 signal readDataInterim 	   : std_logic_vector(31 downto 0);
+signal RomReadAddr 		   : std_logic_vector(11 downto 0);
+signal RomReadData 		   : std_logic_vector(31 downto 0) := x"DEADBEEF";
 
 component UART_TOP is
 generic (
@@ -48,6 +54,7 @@ component data_memory is
 			Address		: in std_logic_vector(11 downto 0);	
 			DataIn		: in std_logic_vector(31 downto 0);
 			WriteEn		: in std_logic;
+            ByteEn 		: in std_logic_vector(1 downto 0);
 			 --OUTPUTS:
 			ReadData	: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000"
 			
@@ -55,6 +62,17 @@ component data_memory is
 	);
 end component;
 
+component instruction_memory is
+	port(
+		AddrIn		: in std_logic_vector(11 downto 0);
+		RomReadAddr : in std_logic_vector(11 downto 0);
+		
+
+		InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
+		RomReadData : out std_logic_vector(31 downto 0) := x"DEADBEEF"
+
+	);
+end component;
 
 begin
 
@@ -75,14 +93,30 @@ Clk			=> Clk,
 Address		=> Address,
 DataIn		=> DataIn,
 WriteEn		=> WriteEn,
+ByteEn      => ByteEn,
 ReadData	=> readDataInterim
 );
 
+myInstructionMemory : instruction_memory
+
+port map(
+
+AddrIn		=> AddrIn,
+RomReadAddr => RomReadAddr,
+RomReadData => RomReadData,
+
+
+ --OUTPUTS:
+InstOut		=> InstOut
+);
+
 ReadData <= (31 downto 12 => '0') & "0000" & uartReadDataInterim(7 downto 0) when Address >= x"100" and Address <=x"108" else
+			RomReadData when Address >= x"200" and Address <=x"300" else
 			readDataInterim;
 			
 			
 uartAddressInterim <= Address - x"100"; 
+RomReadAddr <= Address - x"200";
 
 
 

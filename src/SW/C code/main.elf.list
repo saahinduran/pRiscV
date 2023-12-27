@@ -1,0 +1,110 @@
+
+main.elf:     file format elf32-littleriscv
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .text         000000a0  00000200  00000200  00000200  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .data         00000000  00000000  000002a0  00001000  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .bss          00000000  00000000  00000000  00001000  2**0
+                  ALLOC
+  3 .debug_info   0000011b  00000000  00000000  00001000  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  4 .debug_abbrev 000000aa  00000000  00000000  0000111b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  5 .debug_aranges 00000028  00000000  00000000  000011c5  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_ranges 00000018  00000000  00000000  000011ed  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_line   000001ae  00000000  00000000  00001205  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_str    000000e2  00000000  00000000  000013b3  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .comment      00000039  00000000  00000000  00001495  2**0
+                  CONTENTS, READONLY
+ 10 .debug_frame  0000003c  00000000  00000000  000014d0  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000200 <_start>:
+#define UART_STS_REG_ADDR         0x104
+#define UART_TX_DATA_REG_ADDR     0x108
+
+void __attribute__((section(".init"),naked)) _start(void) {
+
+    asm volatile("la sp, _end_stack");
+ 200:	04000113          	li	sp,64
+}
+ 204:	00000013          	nop
+
+00000208 <main>:
+int main()
+{
+ 208:	fe010113          	addi	sp,sp,-32
+ 20c:	00812e23          	sw	s0,28(sp)
+ 210:	02010413          	addi	s0,sp,32
+	const uint8_t *msg = "Hello world\n";
+ 214:	29000793          	li	a5,656
+ 218:	fef42623          	sw	a5,-20(s0)
+	
+	// Enable TX
+	*(uint32_t *) UART_CTRL_REG_ADDR = 1;
+ 21c:	10000793          	li	a5,256
+ 220:	00100713          	li	a4,1
+ 224:	00e7a023          	sw	a4,0(a5)
+	while(*msg != 0)
+ 228:	0580006f          	j	280 <main+0x78>
+	{
+		uint32_t statusReg;
+		*(uint32_t *) UART_TX_DATA_REG_ADDR = (uint32_t)msg;
+ 22c:	10800793          	li	a5,264
+ 230:	fec42703          	lw	a4,-20(s0)
+ 234:	00e7a023          	sw	a4,0(a5)
+		msg = msg +1;
+ 238:	fec42783          	lw	a5,-20(s0)
+ 23c:	00178793          	addi	a5,a5,1
+ 240:	fef42623          	sw	a5,-20(s0)
+	
+		do
+		{
+			statusReg = *(uint32_t *)UART_STS_REG_ADDR;
+ 244:	10400793          	li	a5,260
+ 248:	0007a783          	lw	a5,0(a5)
+ 24c:	fef42423          	sw	a5,-24(s0)
+			statusReg = (statusReg & 0x2) >> 1;
+ 250:	fe842783          	lw	a5,-24(s0)
+ 254:	0017d793          	srli	a5,a5,0x1
+ 258:	0017f793          	andi	a5,a5,1
+ 25c:	fef42423          	sw	a5,-24(s0)
+			asm volatile ("NOP");
+ 260:	00000013          	nop
+		}while(statusReg);
+ 264:	fe842783          	lw	a5,-24(s0)
+ 268:	fc079ee3          	bnez	a5,244 <main+0x3c>
+
+    const int a = 1;
+ 26c:	00100793          	li	a5,1
+ 270:	fef42223          	sw	a5,-28(s0)
+    int b;
+    b = a +1;
+ 274:	fe442783          	lw	a5,-28(s0)
+ 278:	00178793          	addi	a5,a5,1
+ 27c:	fef42023          	sw	a5,-32(s0)
+	while(*msg != 0)
+ 280:	fec42783          	lw	a5,-20(s0)
+ 284:	0007c783          	lbu	a5,0(a5)
+ 288:	fa0792e3          	bnez	a5,22c <main+0x24>
+	
+	}
+	
+	while(1);
+ 28c:	0000006f          	j	28c <main+0x84>
+ 290:	6548                	flw	fa0,12(a0)
+ 292:	6c6c                	flw	fa1,92(s0)
+ 294:	6f77206f          	j	7318a <_end_text+0x72eea>
+ 298:	6c72                	flw	fs8,28(sp)
+ 29a:	0a64                	addi	s1,sp,284
+ 29c:	0000                	unimp
+	...

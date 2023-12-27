@@ -120,7 +120,7 @@ newDataAvailable <= '0';
 		
 end if;
 end process;
-Register_Read_Process : process (addr) is
+Register_Read_Process : process (addr, controlReg, statusReg, sendDataReg) is
 
 begin
 		case addr is
@@ -135,6 +135,7 @@ begin
 			outdata <=  sendDataReg;
 		
 		when others => 
+            outdata <=  x"FF";
 		end case;
 		
 end process;

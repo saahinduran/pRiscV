@@ -12,18 +12,28 @@ architecture riscVTest of datapathTestBench is
 
 component datapath is
 port(
-    clock_in : in std_logic
+    clock_in 	: in std_logic := '1';
+	rst  		: in std_logic := '1';
+    Memout 		: out std_logic_vector(5 downto 0) := "000000";
+	uart_tx_o 	: out std_logic := '0'
 );
 end component;
 
 signal clock_in : std_logic:='0';
-
+signal rst  		:  std_logic := '1';
+signal Memout 		:  std_logic_vector(5 downto 0) := "000000";
+signal uart_tx_o 	:  std_logic := '0';
 
 begin
 
 cpu : datapath 
 port map(
-	clock_in => clock_in
+	clock_in   => clock_in     ,
+	rst  	   => rst  	       ,
+	Memout 	   => Memout 	   ,
+	uart_tx_o  => uart_tx_o
+	
+	
 );
 
 
