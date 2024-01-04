@@ -114,8 +114,8 @@ AluControl <= "000" when OpCode = LUI_TYPE or OpCode = AUIPC_TYPE or
 			  "111" when ( (OpCode = I_TYPE or OpCode = R_TYPE) and (Funct3 ="101" and Funct7 ="0100000") )  else -- SRAI
 			  "000"; -- default AluControl is add.
 			  
-WriteWidth <= "00" 	when  Funct3 = "000" or Funct3 = "100" else
-			  "01"  when  Funct3 = "001" or Funct3 = "101" else
+WriteWidth <= "00" 	when  Funct3 = "100" or Funct3 = "000" else
+			  "01"  when  Funct3 = "101" or Funct3 = "001" else
 			  "10"	when  Funct3 = "010" else
 			  "00";
 			  

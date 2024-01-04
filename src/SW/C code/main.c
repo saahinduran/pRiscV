@@ -7,32 +7,22 @@
 void __attribute__((section(".init"),naked)) _start(void) {
 
     asm volatile("la sp, _end_stack");
+    asm volatile("add x1,x0,x1");
 }
 int main()
 {
-	const uint8_t *msg = "Hello world\n";
-	
-	// Enable TX
+  const uint8_t *msg = "Hello from pRiscV";
 	*(uint32_t *) UART_CTRL_REG_ADDR = 1;
-	while(*msg != 0)
-	{
-		uint32_t statusReg;
-		*(uint32_t *) UART_TX_DATA_REG_ADDR = (uint32_t)msg;
-		msg = msg +1;
+	// Enable TX
+  /*
 	
-		do
-		{
-			statusReg = *(uint32_t *)UART_STS_REG_ADDR;
-			statusReg = (statusReg & 0x2) >> 1;
-			asm volatile ("NOP");
-		}while(statusReg);
+  *(uint32_t *) UART_TX_DATA_REG_ADDR = 'H';
+  while( ( (*(uint32_t *)UART_STS_REG_ADDR) & 0x2) >> 1 );
+  */
 
-    const int a = 1;
-    int b;
-    b = a +1;
-	
-	}
-	
-	while(1);
-	return 0;
+  *(uint32_t *) UART_TX_DATA_REG_ADDR = *msg;
+
+  while(1);
+
+  
 }

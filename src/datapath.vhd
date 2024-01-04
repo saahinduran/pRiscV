@@ -9,7 +9,8 @@ port(
     clock_in 	: in std_logic := '1';
 	rst  		: in std_logic := '1';
     Memout 		: out std_logic_vector(5 downto 0) := "000000";
-	uart_tx_o 	: out std_logic := '0'
+	uart_tx_o 	: out std_logic := '0';
+	sampleClkOut: out std_logic
 );
 
 end datapath;
@@ -31,7 +32,10 @@ signal ImmSrc       : std_logic_vector(2 downto 0) := "000";
 signal Alu1In		: std_logic_vector (31 downto 0):= "00000000000000000000000000000000"; 
 signal Alu2In		: std_logic_vector (31 downto 0):= "00000000000000000000000000000000"; 
 signal AluControl   : std_logic_vector (2 downto 0) := "000";  
-signal AluOut       : std_logic_vector (31 downto 0):= "00000000000000000000000000000000";
+signal AluOutDataPth       : std_logic_vector (31 downto 0):= x"ffffffff";
+--attribute syn_preserve : integer;
+--attribute syn_preserve of AluOutDataPth: signal is 1;
+
 signal N,Z,C,V		: std_logic := '0';
 signal PcSrc		: std_logic := '0';
 signal ResultSrc    : std_logic_vector(3 downto 0) := "0000";
@@ -45,6 +49,28 @@ signal MemWriteData : std_logic_vector(31 downto 0) := "000000000000000000000000
 signal WriteWidth 	: std_logic_vector(1 downto 0) := "00";
 signal Reset 		: std_logic:='1';
 signal ByteEn       :  std_logic_vector(1 downto 0):="00";
+signal clkSample 	: std_logic;
+signal clkSlow			:std_logic;
+
+
+
+
+   component Gowin_rPLL
+       port (
+           clkout: out std_logic;
+         clkin: in std_logic
+      );
+   end component;
+
+component Gowin_CLKDIV
+    port (
+        clkout: out std_logic;
+        hclkin: in std_logic;
+        resetn: in std_logic
+    );
+end component;
+	
+
 
 
 
@@ -110,44 +136,33 @@ component control_unit is
 	);
 end component;
 
+
 component ALU is
 
     port (
-    Rs1, Rs2   : in  std_logic_vector (31 downto 0);  
-    AluControl : in  std_logic_vector (2 downto 0);  
-    AluOut     : out std_logic_vector (31 downto 0); 
-    N,Z,C,V    : out std_logic       
+    Rs1, Rs2   : in  std_logic_vector (31 downto 0) := "00000000000000000000000000000000";  
+    AluControl : in  std_logic_vector (2 downto 0) := "000";  
+    AluOut     : out std_logic_vector (31 downto 0) := x"FEADBEEF" ; 
+    N,Z,C,V    : out std_logic       := '0'
     );
 end component; 
 
 
-component data_memory is
-	port(
-			 --INPUTS:
-			Clk			: in std_logic;
-			Address		: in std_logic_vector(11 downto 0);	
-			DataIn		: in std_logic_vector(31 downto 0);
-			WriteEn		: in std_logic;
-			 --OUTPUTS:
-			ReadData	: out std_logic_vector(31 downto 0)
-	);
-end component;
-
-
 component peripherals is
-	port(
+port(
 	Clk			: in std_logic;
-	Address		: in std_logic_vector(11 downto 0);	
+	Address		: in std_logic_vector(31 downto 0):= x"00000000";	
 	DataIn		: in std_logic_vector(31 downto 0);
 	WriteEn		: in std_logic;
-	AddrIn		: in std_logic_vector(11 downto 0); -- PC ADDRESS / ROM ADDRESS 
-	ByteEn      : in std_logic_vector(1 downto 0);
+	AddrIn		: in std_logic_vector(31 downto 0); -- PC ADDRESS / ROM ADDRESS 
+    ByteEn      : in std_logic_vector(1 downto 0);
+
 
 	 --OUTPUTS:
-	ReadData	: out std_logic_vector(31 downto 0);
+	ReadData	: out std_logic_vector(31 downto 0) :=x"DEADBEEF";
 	InstOut		: out std_logic_vector(31 downto 0) := "00000000000000000000000000000000";
 	UART_TX		: out std_logic:= '1'
-	);
+);
 end component;
 
 
@@ -158,10 +173,26 @@ Reset <= rst;
 
 
 
+clkdiv: Gowin_CLKDIV
+    port map (
+        clkout => clkSlow,
+        hclkin => clk,
+        resetn => '1'
+    );
+
+ pll: Gowin_rPLL
+ port map (
+         clkout => clkSample,
+        clkin => clk
+ );
+ sampleClkOut <= clkSample;	
+
+
+
 RegisterFile : register_file 
 port map(
 
-Clk			=>  Clk, 
+Clk			=>  clk, 
 Rs1Sel		=>  Instruction(19 downto 15),  
 Rs2Sel		=>  Instruction(24 downto 20),
 RdSel		=>  Instruction(11 downto 7),
@@ -187,7 +218,7 @@ port map(
 Rs1		 	=> Alu1In,
 Rs2        	=> Alu2In,
 AluControl 	=> AluControl, 
-AluOut     	=> AluOut,     
+AluOut     	=> AluOutDataPth,     
 N	        => N,
 Z           => Z,
 C           => C,
@@ -219,16 +250,17 @@ RegWrite     => RegWrite
 
 myPeripherals : peripherals
 port map(
-Clk			=> Clk,      
-Address		=> AluOut(11 downto 0),  
-DataIn		=> MemWriteData,
-WriteEn		=> MemWrite,
-AddrIn		=> PC(11 downto 0),
-ByteEn		=> ByteEn,
- --OUTPUTS: =>         
-ReadData	=> ReadData,
-InstOut		=> Instruction,
-UART_TX		=> uart_tx_o   
+	Clk			=> clk,
+	Address		=> AluOutDataPth,
+	DataIn		=> MemWriteData,
+	WriteEn		=> MemWrite,
+	AddrIn		=> PC, -- PC ADDRESS / ROM ADDRESS 
+	ByteEn 		=> ByteEn,
+
+	 --OUTPUTS:
+	ReadData	=> ReadData,
+	InstOut		=> Instruction,
+	UART_TX		=> uart_tx_o
 
 );
 
@@ -238,7 +270,7 @@ if(rising_edge(clk)) then
 
 
 if (Reset = '0' ) then
-	PC <= "00000000000000000000000000000000";
+	PC <= x"00000004";
 elsif(PcSrc = '0') then
 	PC <= PCNext;
 else
@@ -257,22 +289,42 @@ Alu2In <= Rs2Out when AluSrc = '0' else
 		 
 Alu1In <= PC when Instruction(6 downto 0) = "0010111" else	
 		  Rs1Out;
-		 
-Result <= ReadData when ResultSrc = "0001" else
-		  PCNext   when ResultSrc = "0010" else
-		  ( (31 downto 8 => ReadData(7)) & ReadData(7 downto 0)) when ResultSrc = "0011" 	else --load byte
-		  ( (31 downto 16 => ReadData(7)) & ReadData(15 downto 0)) when ResultSrc = "0100" 	else -- load halfword
-		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "0101" 			else -- load byte u
-		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "0110" 			else -- load halfword u
-		  ( (31 downto 1 => '0') & '1')  when ResultSrc = "1000" else   -- SLTI,SLT,SLTIU,SLTU satisfied
-		  (  31 downto 0 => '0'  	)  when ResultSrc = "0000" else	-- SLTI,SLT,SLTIU,SLTU not satisfied
-		  AluOut;
+	
+
+
+RESULT_PROCESS: process(ResultSrc, ReadData, PCNext, AluOutDataPth) is
+
+begin
+case ResultSrc is
+	when "0001" | "0011" | "0100" | "0101" | "0110"  => 
+		Result <= ReadData;
+		
+	when "0010" =>
+		Result <= PCNext;
+		
+	when "1000" =>
+		Result <= x"00000001";
+	when "0000" =>
+		Result <= x"00000000";
+	when others =>
+		Result <= AluOutDataPth; 
+
+
+end case;
+end process;
+	
+--Result <= ReadData when ResultSrc = "0001" else
+--		  PCNext   when ResultSrc = "0010" else
+--		  ( (31 downto 8 => ReadData(7)) & ReadData(7 downto 0)) when ResultSrc = "0011" 	else --load byte
+--		  ( (31 downto 16 => ReadData(7)) & ReadData(15 downto 0)) when ResultSrc = "0100" 	else -- load halfword
+--		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "0101" 			else -- load byte u
+--		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "0110" 			else -- load halfword u
+--		  ( (31 downto 1 => '0') & '1')  when ResultSrc = "1000" else   -- SLTI,SLT,SLTIU,SLTU satisfied
+--		  (  31 downto 0 => '0'  	)  when ResultSrc = "0000" else	-- SLTI,SLT,SLTIU,SLTU not satisfied
+--		  AluOutDataPth;
 		   
 		  
-MemWriteData <= (31 downto 8 => '0') & Rs2Out(7 downto 0) 	when ByteEn = "00" else
-				(31 downto 16 => '0') & Rs2Out(15 downto 0) when ByteEn = "01" else
-				(31 downto 8 => '0') & Rs2Out(7 downto 0) 	when ByteEn = "00" else
-				Rs2Out;
+MemWriteData <= Rs2Out;
 
 
 
@@ -282,5 +334,7 @@ MemWriteData <= (31 downto 8 => '0') & Rs2Out(7 downto 0) 	when ByteEn = "00" el
 
 PCNext <= PC + 4;		  
 clk <= clock_in;
+--clkSlow <= clk;
+
 Memout <= ReadData(5 downto 0);
 end riscV;

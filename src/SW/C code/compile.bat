@@ -25,5 +25,5 @@ riscv-none-embed-objcopy.exe -O binary  main.elf  "main.bin"
 
 
 python.exe .\final_output.py .\main.bin fpga.txt
-
+python.exe .\byteoutput.py .\main.bin fpgaByte.txt
 

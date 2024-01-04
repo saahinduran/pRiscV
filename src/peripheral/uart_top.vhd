@@ -9,7 +9,7 @@ c_baudrate		: integer := 115_200
 );
 port (
 clk				: in std_logic;
-addr 			: in std_logic_vector(7 downto 0); 
+addr 			: in std_logic_vector(31 downto 0); 
 din 			: in std_logic_vector(7 downto 0);  
 w_en			: in std_logic;
 outdata			: out std_logic_vector(7 downto 0);
@@ -30,9 +30,9 @@ signal state : STATE_TYPE := IDLE;
 
 component uart_tx is
 generic (
-c_clkfreq		: integer := 100_000_000;
+c_clkfreq		: integer := 27_000_000;
 c_baudrate		: integer := 115_200;
-c_stopbit		: integer := 2
+c_stopbit		: integer := 1
 );
 port (
 clk				: in std_logic;
@@ -103,11 +103,11 @@ newDataAvailable <= '0';
  
 		case addr is
 		
-		when x"00" => 
+		when x"0000_0100" => 
 			controlReg <= din;
 		
 		
-		when x"08" =>
+		when x"0000_0108" =>
 			if(statusReg(1) /= '1') then
 				sendDataReg <= din;
 				newDataAvailable <= '1';
@@ -125,13 +125,13 @@ Register_Read_Process : process (addr, controlReg, statusReg, sendDataReg) is
 begin
 		case addr is
 		
-		when x"00" => 
+		when x"0000_0100" => 
 			outdata <= controlReg;
 		
-		when x"04" =>
+		when x"0000_0104" =>
 			outdata <= statusReg;
 			
-		when x"08" =>
+		when x"0000_0108" =>
 			outdata <=  sendDataReg;
 		
 		when others => 

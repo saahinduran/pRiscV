@@ -23,11 +23,12 @@ architecture reg of register_file is
 
 type REG_ARRAY is array (0 to 31 ) of std_logic_vector (31 downto 0);
 signal registerFile :REG_ARRAY := (x"00000000",x"12345678",others => "00000000000000000000000000000000");
-
+signal Reg2Debug : std_logic_vector(31 downto 0);
+signal Reg8Debug : std_logic_vector(31 downto 0);
 
 begin
 
-REGISTER_PROCESS : process(Clk) is 
+REGISTER_PROCESS : process(Clk, RdSel, WriteEn) is 
 
 begin
 if(rising_edge(Clk)) then
@@ -48,17 +49,10 @@ end if;
 
 end process;
 
+
 Rs1Out <= registerFile(to_integer(unsigned(Rs1Sel)));
 Rs2Out <= registerFile(to_integer(unsigned(Rs2Sel)));
+--Reg2Debug <= registerFile(0);
 
 
 end reg;
-
-
---		if(RdSel = Rs1Sel and RdSel /= "00000") then 
---			Rs1Out <= DataIn;
---		end if;
-		
---		if(RdSel = Rs2Sel and RdSel /= "00000") then 
---			Rs2Out <= DataIn;
---		end if;

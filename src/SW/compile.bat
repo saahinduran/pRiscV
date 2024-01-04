@@ -25,5 +25,5 @@ riscv-none-embed-objcopy.exe -O binary  uart_tx_test.elf  "uart_tx_test.bin"
 
 
 python.exe .\final_output.py .\uart_tx_test.bin fpga.txt
-
+python.exe .\byteoutput.py .\uart_tx_test.bin fpgaByte.txt
 

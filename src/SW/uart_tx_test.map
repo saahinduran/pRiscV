@@ -10,14 +10,14 @@ Linker script and memory map
 
 LOAD uart_tx_test.o
 
-.text           0x0000000000000004       0x18
+.text           0x0000000000000004       0x28
  *(*.text)
- .text          0x0000000000000004       0x18 uart_tx_test.o
+ .text          0x0000000000000004       0x28 uart_tx_test.o
                 0x0000000000000004                _start
 OUTPUT(uart_tx_test.elf elf32-littleriscv)
 
-.data           0x000000000000001c        0x0
- .data          0x000000000000001c        0x0 uart_tx_test.o
+.data           0x000000000000002c        0x0
+ .data          0x000000000000002c        0x0 uart_tx_test.o
 
-.bss            0x000000000000001c        0x0
- .bss           0x000000000000001c        0x0 uart_tx_test.o
+.bss            0x000000000000002c        0x0
+ .bss           0x000000000000002c        0x0 uart_tx_test.o

@@ -6,7 +6,7 @@ ENTRY(_start)
 /* Memories definition */
 MEMORY
 {
-  FLASH    (xrw)    : ORIGIN = 0x200,   LENGTH = 1024
+  FLASH    (xrw)    : ORIGIN = 0x204,   LENGTH = 1024
   RAM 		(rw) 	: ORIGIN = 0x00000000,   LENGTH = 64
 }
 

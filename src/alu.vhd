@@ -9,7 +9,7 @@ entity ALU is
     port (
     Rs1, Rs2   : in  std_logic_vector (31 downto 0) := "00000000000000000000000000000000";  
     AluControl : in  std_logic_vector (2 downto 0) := "000";  
-    AluOut     : out std_logic_vector (31 downto 0) := "00000000000000000000000000000000"; 
+    AluOut     : out std_logic_vector (31 downto 0) := x"FEADBEEF"; 
     N,Z,C,V    : out std_logic       := '0'
     );
 end ALU; 
@@ -28,8 +28,8 @@ constant ORR  : std_logic_vector(2 downto 0) := "011";
 constant XORR : std_logic_vector(2 downto 0) := "010";
 
 
-signal aluResult : std_logic_vector (31 downto 0) := "00000000000000000000000000000000";
-signal aluTemp: std_logic_vector (32 downto 0) := "000000000000000000000000000000000";
+signal aluResult : std_logic_vector (31 downto 0) ;
+signal aluTemp: std_logic_vector (32 downto 0) ;
 signal sumOverFlow, subOverFlow :std_logic := '0';
 
 
@@ -64,7 +64,7 @@ case(AluControl) is
   
   
     when others => aluResult <= Rs1 + Rs2;
-	
+
 end case;
 end process;
  

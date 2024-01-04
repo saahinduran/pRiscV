@@ -4,3 +4,4 @@ impl/
 *.user
 src/new.vhd
 *.cst
+.vscode/

@@ -3,15 +3,19 @@ uart_tx_test.elf:     file format elf32-littleriscv
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         00000018  00000004  00000004  00001004  2**2
+  0 .text         00000028  00000004  00000004  00001004  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
 
 Disassembly of section .text:
 
 00000004 <_start>:
-   4:	20400093          	li	ra,516
-   8:	20500113          	li	sp,517
-   c:	20800193          	li	gp,520
-  10:	0000a203          	lw	tp,0(ra)
-  14:	00012283          	lw	t0,0(sp)
-  18:	0001a303          	lw	t1,0(gp)
+   4:	00000013          	nop
+   8:	0bb00293          	li	t0,187
+   c:	00502023          	sw	t0,0(zero) # 0 <_start-0x4>
+  10:	10000193          	li	gp,256
+  14:	00100113          	li	sp,1
+  18:	0021a023          	sw	sp,0(gp)
+  1c:	10800293          	li	t0,264
+  20:	00002203          	lw	tp,0(zero) # 0 <_start-0x4>
+  24:	0042a023          	sw	tp,0(t0)
+  28:	00000063          	beqz	zero,28 <_start+0x24>
