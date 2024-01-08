@@ -10,28 +10,28 @@ Linker script and memory map
 
 LOAD main.o
 
-.text           0x0000000000000204       0x54
+.text           0x0000000000000204       0x7c
                 0x0000000000000204                _start_text = .
                 0x0000000000000204                . = ORIGIN (FLASH)
  *(.init)
- .init          0x0000000000000204        0xc main.o
+ .init          0x0000000000000204        0x8 main.o
                 0x0000000000000204                _start
-                0x0000000000000210                _start_vector = .
+                0x000000000000020c                _start_vector = .
  *(.isr_vector)
  *(.text*)
- .text          0x0000000000000210       0x34 main.o
-                0x0000000000000210                main
+ .text          0x000000000000020c       0x60 main.o
+                0x000000000000020c                main
  *(.rodata*)
- .rodata        0x0000000000000244       0x12 main.o
-                0x0000000000000258                . = ALIGN (0x4)
- *fill*         0x0000000000000256        0x2 
-                0x0000000000000258                _end_text = .
-                0x0000000000000258                _stored_data = .
+ .rodata        0x000000000000026c       0x12 main.o
+                0x0000000000000280                . = ALIGN (0x4)
+ *fill*         0x000000000000027e        0x2 
+                0x0000000000000280                _end_text = .
+                0x0000000000000280                _stored_data = .
 
-.rela.dyn       0x0000000000000258        0x0
- .rela.init     0x0000000000000258        0x0 main.o
+.rela.dyn       0x0000000000000280        0x0
+ .rela.init     0x0000000000000280        0x0 main.o
 
-.data           0x0000000000000000        0x0 load address 0x0000000000000258
+.data           0x0000000000000000        0x0 load address 0x0000000000000280
                 0x0000000000000000                _start_data = .
  *(.data*)
  .data          0x0000000000000000        0x0 main.o
@@ -40,7 +40,7 @@ LOAD main.o
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                _end_data = .
 
-.bss            0x0000000000000000        0x0 load address 0x0000000000000258
+.bss            0x0000000000000000        0x0 load address 0x0000000000000280
                 0x0000000000000000                _start_bss = .
  *(.bss*)
  .bss           0x0000000000000000        0x0 main.o
@@ -52,8 +52,8 @@ LOAD main.o
                 0x0000000000000040                PROVIDE (_end_stack = (ORIGIN (RAM) + LENGTH (RAM)))
 OUTPUT(main.elf elf32-littleriscv)
 
-.debug_info     0x0000000000000000       0xe3
- .debug_info    0x0000000000000000       0xe3 main.o
+.debug_info     0x0000000000000000       0xf1
+ .debug_info    0x0000000000000000       0xf1 main.o
 
 .debug_abbrev   0x0000000000000000       0x90
  .debug_abbrev  0x0000000000000000       0x90 main.o
@@ -65,12 +65,12 @@ OUTPUT(main.elf elf32-littleriscv)
 .debug_ranges   0x0000000000000000       0x18
  .debug_ranges  0x0000000000000000       0x18 main.o
 
-.debug_line     0x0000000000000000      0x13e
- .debug_line    0x0000000000000000      0x13e main.o
+.debug_line     0x0000000000000000      0x17c
+ .debug_line    0x0000000000000000      0x17c main.o
 
-.debug_str      0x0000000000000000       0xd8
- .debug_str     0x0000000000000000       0xd8 main.o
-                                        0x11d (size before relaxing)
+.debug_str      0x0000000000000000       0xe4
+ .debug_str     0x0000000000000000       0xe4 main.o
+                                        0x12e (size before relaxing)
 
 .comment        0x0000000000000000       0x39
  .comment       0x0000000000000000       0x39 main.o

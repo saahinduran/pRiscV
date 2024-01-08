@@ -10,9 +10,11 @@
 
 _start :
 nop
-addi x5,x0,0xBB
+addi x4,x0,0
+lui  x5,0x11223
+addi x5,x5,0x344
 sw   x5,0(x0)
-
+lw   x4,0(x0)
 addi x3,x0,UART_CTRL_REG_ADDR
 addi x2,x0,1
 sw x2,0(x3) 

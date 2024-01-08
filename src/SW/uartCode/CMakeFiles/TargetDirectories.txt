@@ -1,0 +1,3 @@
+C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/uartCode/CMakeFiles/main.elf.dir
+C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/uartCode/CMakeFiles/edit_cache.dir
+C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/uartCode/CMakeFiles/rebuild_cache.dir

@@ -1,0 +1,1599 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-sxqina"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-sxqina"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-sxqina'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_a20b6/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_a20b6.dir\\build.make CMakeFiles/cmTC_a20b6.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-sxqina'
+        Building C object CMakeFiles/cmTC_a20b6.dir/CMakeCCompilerABI.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin    -o CMakeFiles\\cmTC_a20b6.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        'C:\\GMD\\toolchain\\RISC-V_toolchain\\bin' is not recognized as an internal or external command,
+        operable program or batch file.
+        CMakeFiles\\cmTC_a20b6.dir\\build.make:76: recipe for target 'CMakeFiles/cmTC_a20b6.dir/CMakeCCompilerABI.c.obj' failed
+        mingw32-make.exe[1]: *** [CMakeFiles/cmTC_a20b6.dir/CMakeCCompilerABI.c.obj] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-sxqina'
+        Makefile:126: recipe for target 'cmTC_a20b6/fast' failed
+        mingw32-make.exe: *** [cmTC_a20b6/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: C:/GMD/toolchain/RISC-V_toolchain/bin"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-fb88gp"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-fb88gp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-fb88gp'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_ea083/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ea083.dir\\build.make CMakeFiles/cmTC_ea083.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-fb88gp'
+        Building C object CMakeFiles/cmTC_ea083.dir/testCCompiler.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin    -o CMakeFiles\\cmTC_ea083.dir\\testCCompiler.c.obj -c C:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\CMakeFiles\\CMakeScratch\\TryCompile-fb88gp\\testCCompiler.c
+        CMakeFiles\\cmTC_ea083.dir\\build.make:76: recipe for target 'CMakeFiles/cmTC_ea083.dir/testCCompiler.c.obj' failed
+        process_begin: CreateProcess(NULL, C:\\GMD\\toolchain\\RISC-V_toolchain\\bin -o CMakeFiles\\cmTC_ea083.dir\\testCCompiler.c.obj -c C:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\CMakeFiles\\CMakeScratch\\TryCompile-fb88gp\\testCCompiler.c, ...) failed.
+        make (e=5): Eri■im engellendi.\x0d
+        mingw32-make.exe[1]: *** [CMakeFiles/cmTC_ea083.dir/testCCompiler.c.obj] Error 5
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-fb88gp'
+        Makefile:126: recipe for target 'cmTC_ea083/fast' failed
+        mingw32-make.exe: *** [cmTC_ea083/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\\libg.a(lib_a-exit.o): in function `.L0 ':
+      exit.c:(.text.exit+0x1e): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/3.28.0-rc5/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tyuaku"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tyuaku"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tyuaku'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_0daf1/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_0daf1.dir\\build.make CMakeFiles/cmTC_0daf1.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tyuaku'
+        Building C object CMakeFiles/cmTC_0daf1.dir/CMakeCCompilerABI.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe   -v -o CMakeFiles\\cmTC_0daf1.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe
+        Target: riscv-none-embed
+        Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0daf1.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/cc1.exe -quiet -v -imultilib rv32imac/ilp32 -iprefix c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/ -isysroot c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv32imac -mabi=ilp32 -auxbase-strip CMakeFiles\\cmTC_0daf1.dir\\CMakeCCompilerABI.c.obj -version -o C:\\Users\\sahin\\AppData\\Local\\Temp\\ccAEBWkI.s
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/lib/gcc/riscv-none-embed/8.2.0/../../../../include"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include-fixed"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include-fixed
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include
+        End of search list.
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        Compiler executable checksum: a667e3ab1205a53ddf50615d0bcac03f
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0daf1.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/as.exe -v --traditional-format -march=rv32imac -mabi=ilp32 -o CMakeFiles\\cmTC_0daf1.dir\\CMakeCCompilerABI.c.obj C:\\Users\\sahin\\AppData\\Local\\Temp\\ccAEBWkI.s
+        GNU assembler version 2.32 (riscv-none-embed) using BFD version (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 2.32
+        COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/
+        LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_0daf1.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+        Linking C executable cmTC_0daf1.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_0daf1.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_0daf1.dir/objects.a
+        C:\\MinGW\\bin\\ar.exe qc CMakeFiles\\cmTC_0daf1.dir/objects.a @CMakeFiles\\cmTC_0daf1.dir\\objects1.rsp
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_0daf1.dir/objects.a -Wl,--no-whole-archive -o cmTC_0daf1.exe -Wl,--out-implib,libcmTC_0daf1.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        Using built-in specs.
+        COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe
+        COLLECT_LTO_WRAPPER=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/lto-wrapper.exe
+        Target: riscv-none-embed
+        Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 
+        COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/
+        LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_0daf1.exe' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/collect2.exe -plugin c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/liblto_plugin-0.dll -plugin-opt=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\sahin\\AppData\\Local\\Temp\\ccgwtUPS.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed -melf32lriscv -o cmTC_0daf1.exe c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/crt0.o c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/crtbegin.o -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib -Lc:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib --whole-archive CMakeFiles\\cmTC_0daf1.dir/objects.a --no-whole-archive --out-implib libcmTC_0daf1.dll.a --major-image-version 0 --minor-image-version 0 -lgcc --start-group -lgcc -lg -lc --end-group -lgcc c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/crtend.o
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_0daf1.dir\\build.make:98: recipe for target 'cmTC_0daf1.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_0daf1.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tyuaku'
+        Makefile:126: recipe for target 'cmTC_0daf1/fast' failed
+        mingw32-make.exe: *** [cmTC_0daf1/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-qssi7a"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-qssi7a"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-qssi7a'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_70b68/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_70b68.dir\\build.make CMakeFiles/cmTC_70b68.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-qssi7a'
+        Building C object CMakeFiles/cmTC_70b68.dir/testCCompiler.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe    -o CMakeFiles\\cmTC_70b68.dir\\testCCompiler.c.obj -c C:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\CMakeFiles\\CMakeScratch\\TryCompile-qssi7a\\testCCompiler.c
+        Linking C executable cmTC_70b68.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_70b68.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_70b68.dir/objects.a
+        C:\\MinGW\\bin\\ar.exe qc CMakeFiles\\cmTC_70b68.dir/objects.a @CMakeFiles\\cmTC_70b68.dir\\objects1.rsp
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_70b68.dir/objects.a -Wl,--no-whole-archive -o cmTC_70b68.exe -Wl,--out-implib,libcmTC_70b68.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_70b68.dir\\linkLibs.rsp
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_70b68.dir\\build.make:99: recipe for target 'cmTC_70b68.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_70b68.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-qssi7a'
+        Makefile:126: recipe for target 'cmTC_70b68/fast' failed
+        mingw32-make.exe: *** [cmTC_70b68/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\\libg.a(lib_a-exit.o): in function `.L0 ':
+      exit.c:(.text.exit+0x1e): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/3.28.0-rc5/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-h2xy4r"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-h2xy4r"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-h2xy4r'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_292fc/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_292fc.dir\\build.make CMakeFiles/cmTC_292fc.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-h2xy4r'
+        Building C object CMakeFiles/cmTC_292fc.dir/CMakeCCompilerABI.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe   -v -o CMakeFiles\\cmTC_292fc.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe
+        Target: riscv-none-embed
+        Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_292fc.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/cc1.exe -quiet -v -imultilib rv32imac/ilp32 -iprefix c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/ -isysroot c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv32imac -mabi=ilp32 -auxbase-strip CMakeFiles\\cmTC_292fc.dir\\CMakeCCompilerABI.c.obj -version -o C:\\Users\\sahin\\AppData\\Local\\Temp\\ccn4IiXN.s
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/lib/gcc/riscv-none-embed/8.2.0/../../../../include"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include-fixed"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include-fixed
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include
+        End of search list.
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        Compiler executable checksum: a667e3ab1205a53ddf50615d0bcac03f
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_292fc.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/as.exe -v --traditional-format -march=rv32imac -mabi=ilp32 -o CMakeFiles\\cmTC_292fc.dir\\CMakeCCompilerABI.c.obj C:\\Users\\sahin\\AppData\\Local\\Temp\\ccn4IiXN.s
+        GNU assembler version 2.32 (riscv-none-embed) using BFD version (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 2.32
+        COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/
+        LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_292fc.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+        Linking C executable cmTC_292fc.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_292fc.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_292fc.dir/objects.a
+        C:\\MinGW\\bin\\ar.exe qc CMakeFiles\\cmTC_292fc.dir/objects.a @CMakeFiles\\cmTC_292fc.dir\\objects1.rsp
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_292fc.dir/objects.a -Wl,--no-whole-archive -o cmTC_292fc.exe -Wl,--out-implib,libcmTC_292fc.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        Using built-in specs.
+        COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe
+        COLLECT_LTO_WRAPPER=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/lto-wrapper.exe
+        Target: riscv-none-embed
+        Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 
+        COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/
+        LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_292fc.exe' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/collect2.exe -plugin c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/liblto_plugin-0.dll -plugin-opt=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\sahin\\AppData\\Local\\Temp\\ccLe7Z5U.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed -melf32lriscv -o cmTC_292fc.exe c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/crt0.o c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/crtbegin.o -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib -Lc:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib --whole-archive CMakeFiles\\cmTC_292fc.dir/objects.a --no-whole-archive --out-implib libcmTC_292fc.dll.a --major-image-version 0 --minor-image-version 0 -lgcc --start-group -lgcc -lg -lc --end-group -lgcc c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/crtend.o
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_292fc.dir\\build.make:98: recipe for target 'cmTC_292fc.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_292fc.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-h2xy4r'
+        Makefile:126: recipe for target 'cmTC_292fc/fast' failed
+        mingw32-make.exe: *** [cmTC_292fc/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-pfhp28"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-pfhp28"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: ""
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-pfhp28'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_41e8f/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_41e8f.dir\\build.make CMakeFiles/cmTC_41e8f.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-pfhp28'
+        Building C object CMakeFiles/cmTC_41e8f.dir/testCCompiler.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe    -o CMakeFiles\\cmTC_41e8f.dir\\testCCompiler.c.obj -c C:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\CMakeFiles\\CMakeScratch\\TryCompile-pfhp28\\testCCompiler.c
+        Linking C executable cmTC_41e8f.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_41e8f.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_41e8f.dir/objects.a
+        C:\\MinGW\\bin\\ar.exe qc CMakeFiles\\cmTC_41e8f.dir/objects.a @CMakeFiles\\cmTC_41e8f.dir\\objects1.rsp
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_41e8f.dir/objects.a -Wl,--no-whole-archive -o cmTC_41e8f.exe -Wl,--out-implib,libcmTC_41e8f.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_41e8f.dir\\linkLibs.rsp
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_41e8f.dir\\build.make:99: recipe for target 'cmTC_41e8f.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_41e8f.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-pfhp28'
+        Makefile:126: recipe for target 'cmTC_41e8f/fast' failed
+        mingw32-make.exe: *** [cmTC_41e8f/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:233 (message)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      The system is: Windows - 10.0.19045 - AMD64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      1
+      c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32\\libg.a(lib_a-exit.o): in function `.L0 ':
+      exit.c:(.text.exit+0x1e): undefined reference to `_exit'
+      collect2.exe: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/3.28.0-rc5/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-33vnw8"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-33vnw8"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-33vnw8'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_eda51/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_eda51.dir\\build.make CMakeFiles/cmTC_eda51.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-33vnw8'
+        Building C object CMakeFiles/cmTC_eda51.dir/CMakeCCompilerABI.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe   -v -o CMakeFiles\\cmTC_eda51.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe
+        Target: riscv-none-embed
+        Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_eda51.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/cc1.exe -quiet -v -imultilib rv32imac/ilp32 -iprefix c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/ -isysroot c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv32imac -mabi=ilp32 -auxbase-strip CMakeFiles\\cmTC_eda51.dir\\CMakeCCompilerABI.c.obj -version -o C:\\Users\\sahin\\AppData\\Local\\Temp\\ccbjn6cF.s
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/lib/gcc/riscv-none-embed/8.2.0/../../../../include"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include-fixed"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include-fixed
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include
+        End of search list.
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        Compiler executable checksum: a667e3ab1205a53ddf50615d0bcac03f
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_eda51.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/as.exe -v --traditional-format -march=rv32imac -mabi=ilp32 -o CMakeFiles\\cmTC_eda51.dir\\CMakeCCompilerABI.c.obj C:\\Users\\sahin\\AppData\\Local\\Temp\\ccbjn6cF.s
+        GNU assembler version 2.32 (riscv-none-embed) using BFD version (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 2.32
+        COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/
+        LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_eda51.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv32imac' '-mabi=ilp32'
+        Linking C executable cmTC_eda51.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_eda51.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_eda51.dir/objects.a
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ar.exe qc CMakeFiles\\cmTC_eda51.dir/objects.a @CMakeFiles\\cmTC_eda51.dir\\objects1.rsp
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_eda51.dir/objects.a -Wl,--no-whole-archive -o cmTC_eda51.exe -Wl,--out-implib,libcmTC_eda51.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        Using built-in specs.
+        COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe
+        COLLECT_LTO_WRAPPER=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/lto-wrapper.exe
+        Target: riscv-none-embed
+        Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 
+        COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/
+        LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_eda51.exe' '-march=rv32imac' '-mabi=ilp32'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/collect2.exe -plugin c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/liblto_plugin-0.dll -plugin-opt=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\sahin\\AppData\\Local\\Temp\\ccpcbTiU.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lg -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc --sysroot=c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed -melf32lriscv -o cmTC_eda51.exe c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32/crt0.o c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/crtbegin.o -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32imac/ilp32 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0 -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc -Lc:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib -Lc:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib --whole-archive CMakeFiles\\cmTC_eda51.dir/objects.a --no-whole-archive --out-implib libcmTC_eda51.dll.a --major-image-version 0 --minor-image-version 0 -lgcc --start-group -lgcc -lg -lc --end-group -lgcc c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32imac/ilp32/crtend.o
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_eda51.dir\\build.make:98: recipe for target 'cmTC_eda51.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_eda51.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-33vnw8'
+        Makefile:126: recipe for target 'cmTC_eda51/fast' failed
+        mingw32-make.exe: *** [cmTC_eda51/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tpwffz"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tpwffz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tpwffz'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_4cdc3/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_4cdc3.dir\\build.make CMakeFiles/cmTC_4cdc3.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tpwffz'
+        Building C object CMakeFiles/cmTC_4cdc3.dir/testCCompiler.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe    -o CMakeFiles\\cmTC_4cdc3.dir\\testCCompiler.c.obj -c C:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\CMakeFiles\\CMakeScratch\\TryCompile-tpwffz\\testCCompiler.c
+        Linking C executable cmTC_4cdc3.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_4cdc3.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_4cdc3.dir/objects.a
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ar.exe qc CMakeFiles\\cmTC_4cdc3.dir/objects.a @CMakeFiles\\cmTC_4cdc3.dir\\objects1.rsp
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_4cdc3.dir/objects.a -Wl,--no-whole-archive -o cmTC_4cdc3.exe -Wl,--out-implib,libcmTC_4cdc3.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_4cdc3.dir\\linkLibs.rsp
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_4cdc3.dir\\build.make:99: recipe for target 'cmTC_4cdc3.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_4cdc3.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-tpwffz'
+        Makefile:126: recipe for target 'cmTC_4cdc3/fast' failed
+        mingw32-make.exe: *** [cmTC_4cdc3/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:4 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/Microchip/SoftConsole-v2022.2-RISC-V-747/riscv-unknown-elf-gcc/bin/riscv64-unknown-elf-gcc.exe 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/3.28.0-rc5/CompilerIdC/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-xphsaf"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-xphsaf"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-xphsaf'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_ad6eb/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_ad6eb.dir\\build.make CMakeFiles/cmTC_ad6eb.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-xphsaf'
+        Building C object CMakeFiles/cmTC_ad6eb.dir/CMakeCCompilerABI.c.obj
+        C:\\Microchip\\SoftConsole-v2022.2-RISC-V-747\\riscv-unknown-elf-gcc\\bin\\riscv64-unknown-elf-gcc.exe   -v -o CMakeFiles\\cmTC_ad6eb.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\Microchip\\SoftConsole-v2022.2-RISC-V-747\\riscv-unknown-elf-gcc\\bin\\riscv64-unknown-elf-gcc.exe
+        Target: riscv64-unknown-elf
+        Configured with: /Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/sources/riscv-gcc-8.3.0-1.1/configure --prefix=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc --infodir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/info --mandir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/man --htmldir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/html --pdfdir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --with-pkgversion='xPack GNU RISC-V Embedded GCC (Microsemi SoftConsole build)\\x2C 64-bit' --with-bugurl=https://github.com/sifive/freedom-tools/issues --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv64-unknown-elf --with-sysroot=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/riscv64-unknown-elf --with-native-system-header-dir=/include --with-abi=lp64d --with-arch=rv64imafdc --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.3.0 (xPack GNU RISC-V Embedded GCC (Microsemi SoftConsole build), 64-bit) 
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ad6eb.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-mabi=lp64d'
+         c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/riscv64-unknown-elf/8.3.0/cc1.exe -quiet -v -iprefix c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../lib/gcc/riscv64-unknown-elf/8.3.0/ -isysroot c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../riscv64-unknown-elf C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv64imafdc -mabi=lp64d -auxbase-strip CMakeFiles\\cmTC_ad6eb.dir\\CMakeCCompilerABI.c.obj -version -o C:\\Users\\sahin\\AppData\\Local\\Temp\\cc44xyhS.s
+        GNU C17 (xPack GNU RISC-V Embedded GCC (Microsemi SoftConsole build), 64-bit) version 8.3.0 (riscv64-unknown-elf)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        ignoring duplicate directory "c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/8.3.0/include"
+        ignoring nonexistent directory "c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../riscv64-unknown-elf/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/lib/gcc/riscv64-unknown-elf/8.3.0/../../../../include"
+        ignoring duplicate directory "c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/8.3.0/include-fixed"
+        ignoring duplicate directory "c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/lib/gcc/../../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/include"
+        ignoring duplicate directory "c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../riscv64-unknown-elf/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../lib/gcc/riscv64-unknown-elf/8.3.0/include
+         c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../lib/gcc/riscv64-unknown-elf/8.3.0/include-fixed
+         c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/include
+        End of search list.
+        GNU C17 (xPack GNU RISC-V Embedded GCC (Microsemi SoftConsole build), 64-bit) version 8.3.0 (riscv64-unknown-elf)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        Compiler executable checksum: f7f7437ff7ce487b6b5dcf4a8de41076
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ad6eb.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-mabi=lp64d'
+         c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/bin/as.exe -v --traditional-format -march=rv64imafdc -mabi=lp64d -o CMakeFiles\\cmTC_ad6eb.dir\\CMakeCCompilerABI.c.obj C:\\Users\\sahin\\AppData\\Local\\Temp\\cc44xyhS.s
+        GNU assembler version 2.32 (riscv64-unknown-elf) using BFD version (xPack GNU RISC-V Embedded GCC (Microsemi SoftConsole build), 64-bit) 2.32
+        COMPILER_PATH=c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/riscv64-unknown-elf/8.3.0/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/bin/
+        LIBRARY_PATH=c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../riscv64-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'CMakeFiles\\cmTC_ad6eb.dir\\CMakeCCompilerABI.c.obj' '-c' '-march=rv64imafdc' '-mabi=lp64d'
+        Linking C executable cmTC_ad6eb.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_ad6eb.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_ad6eb.dir/objects.a
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ar.exe qc CMakeFiles\\cmTC_ad6eb.dir/objects.a @CMakeFiles\\cmTC_ad6eb.dir\\objects1.rsp
+        C:\\Microchip\\SoftConsole-v2022.2-RISC-V-747\\riscv-unknown-elf-gcc\\bin\\riscv64-unknown-elf-gcc.exe  -v -Wl,--whole-archive CMakeFiles\\cmTC_ad6eb.dir/objects.a -Wl,--no-whole-archive -o cmTC_ad6eb.exe -Wl,--out-implib,libcmTC_ad6eb.dll.a -Wl,--major-image-version,0,--minor-image-version,0 
+        Using built-in specs.
+        COLLECT_GCC=C:\\Microchip\\SoftConsole-v2022.2-RISC-V-747\\riscv-unknown-elf-gcc\\bin\\riscv64-unknown-elf-gcc.exe
+        COLLECT_LTO_WRAPPER=c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/riscv64-unknown-elf/8.3.0/lto-wrapper.exe
+        Target: riscv64-unknown-elf
+        Configured with: /Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/sources/riscv-gcc-8.3.0-1.1/configure --prefix=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc --infodir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/info --mandir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/man --htmldir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/html --pdfdir=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/share/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv64-unknown-elf --with-pkgversion='xPack GNU RISC-V Embedded GCC (Microsemi SoftConsole build)\\x2C 64-bit' --with-bugurl=https://github.com/sifive/freedom-tools/issues --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv64-unknown-elf --with-sysroot=/Host/home/user/Work/riscv64-unknown-elf-gcc-8.3.0-1.1/win32-x64/install/riscv64-unknown-elf-gcc/riscv64-unknown-elf --with-native-system-header-dir=/include --with-abi=lp64d --with-arch=rv64imafdc --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.3.0 (xPack GNU RISC-V Embedded GCC (Microsemi SoftConsole build), 64-bit) 
+        COMPILER_PATH=c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/riscv64-unknown-elf/8.3.0/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/bin/
+        LIBRARY_PATH=c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/;c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../riscv64-unknown-elf/lib/
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ad6eb.exe' '-march=rv64imafdc' '-mabi=lp64d'
+         c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/riscv64-unknown-elf/8.3.0/collect2.exe -plugin c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/riscv64-unknown-elf/8.3.0/liblto_plugin-0.dll -plugin-opt=c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../libexec/gcc/riscv64-unknown-elf/8.3.0/lto-wrapper.exe -plugin-opt=-fresolution=C:\\Users\\sahin\\AppData\\Local\\Temp\\ccE5Ypo1.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgloss -plugin-opt=-pass-through=-lgcc --sysroot=c:\\microchip\\softconsole-v2022.2-risc-v-747\\riscv-unknown-elf-gcc\\bin\\../riscv64-unknown-elf -melf64lriscv -o cmTC_ad6eb.exe c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib/crt0.o c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/crtbegin.o -Lc:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0 -Lc:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc -Lc:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/lib -Lc:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../riscv64-unknown-elf/lib --whole-archive CMakeFiles\\cmTC_ad6eb.dir/objects.a --no-whole-archive --out-implib libcmTC_ad6eb.dll.a --major-image-version 0 --minor-image-version 0 -lgcc --start-group -lc -lgloss --end-group -lgcc c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/crtend.o
+        c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_ad6eb.dir\\build.make:98: recipe for target 'cmTC_ad6eb.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_ad6eb.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-xphsaf'
+        Makefile:126: recipe for target 'cmTC_ad6eb/fast' failed
+        mingw32-make.exe: *** [cmTC_ad6eb/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:4 (project)"
+    checks:
+      - "Check for working C compiler: C:/Microchip/SoftConsole-v2022.2-RISC-V-747/riscv-unknown-elf-gcc/bin/riscv64-unknown-elf-gcc.exe"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-9o9595"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-9o9595"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-9o9595'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_46e18/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_46e18.dir\\build.make CMakeFiles/cmTC_46e18.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-9o9595'
+        Building C object CMakeFiles/cmTC_46e18.dir/testCCompiler.c.obj
+        C:\\Microchip\\SoftConsole-v2022.2-RISC-V-747\\riscv-unknown-elf-gcc\\bin\\riscv64-unknown-elf-gcc.exe    -o CMakeFiles\\cmTC_46e18.dir\\testCCompiler.c.obj -c C:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\CMakeFiles\\CMakeScratch\\TryCompile-9o9595\\testCCompiler.c
+        Linking C executable cmTC_46e18.exe
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_46e18.dir\\link.txt --verbose=1
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E rm -f CMakeFiles\\cmTC_46e18.dir/objects.a
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ar.exe qc CMakeFiles\\cmTC_46e18.dir/objects.a @CMakeFiles\\cmTC_46e18.dir\\objects1.rsp
+        C:\\Microchip\\SoftConsole-v2022.2-RISC-V-747\\riscv-unknown-elf-gcc\\bin\\riscv64-unknown-elf-gcc.exe -Wl,--whole-archive CMakeFiles\\cmTC_46e18.dir/objects.a -Wl,--no-whole-archive -o cmTC_46e18.exe -Wl,--out-implib,libcmTC_46e18.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\\cmTC_46e18.dir\\linkLibs.rsp
+        c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/bin/ld.exe: unrecognized option '--major-image-version'
+        c:/microchip/softconsole-v2022.2-risc-v-747/riscv-unknown-elf-gcc/bin/../lib/gcc/riscv64-unknown-elf/8.3.0/../../../../riscv64-unknown-elf/bin/ld.exe: use the --help option for usage information
+        collect2.exe: error: ld returned 1 exit status
+        CMakeFiles\\cmTC_46e18.dir\\build.make:99: recipe for target 'cmTC_46e18.exe' failed
+        mingw32-make.exe[1]: *** [cmTC_46e18.exe] Error 1
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-9o9595'
+        Makefile:126: recipe for target 'cmTC_46e18/fast' failed
+        mingw32-make.exe: *** [cmTC_46e18/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags:  
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags: -c 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags: -Aa 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc-gcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      no such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple (clang|LLVM) version)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is ARMClang using "--version" did not match "armclang":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is OrangeC using "--version" did not match "occ \\(OrangeC\\) Version":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is HP using "-V" did not match "HP C":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is IntelLLVM using "--version" did not match "(Intel[^
+      ]+oneAPI)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is SunPro using "-V" did not match "Sun C":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is XL using "-qversion" did not match "XL C":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is MSVC using "-?" did not match "Microsoft":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is TI using "-h" did not match "Texas Instruments":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is IAR using "" did not match "IAR Assembler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is ARMCC using "" did not match "(ARM Compiler)|(ARM Assembler)|(Arm Compiler)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is NASM using "-v" did not match "(NASM version)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is YASM using "--version" did not match "(yasm)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is ADSP using "-version" did not match "Analog Devices":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is QCC using "-V" did not match "gcc_nto":
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags:  
+      
+      The output was:
+      0
+      c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 0000000000010074
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/3.28.0-rc5/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      riscv-none-embed-gcc (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 8.2.0
+      Copyright (C) 2018 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: C:/GMD/toolchain/RISC-V_toolchain/bin/riscv-none-embed-gcc.exe 
+      Build flags: -march=rv32i;-mabi=ilp32;-static;-mcmodel=medany;-fvisibility=hidden;-nostdlib;-nostartfiles;-g;-O0
+      Id flags:  
+      
+      The output was:
+      0
+      c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/ld.exe: warning: cannot find entry symbol _start; defaulting to 0000000000010074
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+      
+      The C compiler identification is GNU, found in:
+        C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/3.28.0-rc5/CompilerIdC/a.out
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      riscv-none-embed-gcc.exe (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 8.2.0
+      Copyright (C) 2018 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9"
+      binary: "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9"
+    cmakeVariables:
+      CMAKE_C_FLAGS: " -march=rv32i -mabi=ilp32 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -g -O0"
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9'
+        
+        Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_3cfa8/fast
+        C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_3cfa8.dir\\build.make CMakeFiles/cmTC_3cfa8.dir/build
+        mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9'
+        Building C object CMakeFiles/cmTC_3cfa8.dir/CMakeCCompilerABI.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe   -march=rv32i -mabi=ilp32 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -g -O0    -v -o CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"
+        Using built-in specs.
+        COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe
+        Target: riscv-none-embed
+        Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib
+        Thread model: single
+        gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 
+        COLLECT_GCC_OPTIONS='-march=rv32i' '-mabi=ilp32' '-static' '-mcmodel=medany' '-fvisibility=hidden' '-nostdlib' '-nostartfiles' '-g' '-O0' '-v' '-o' 'CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj' '-c'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/cc1.exe -quiet -v -imultilib rv32i/ilp32 -iprefix c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/ -isysroot c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv32i -mabi=ilp32 -mcmodel=medany -auxbase-strip CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj -g -O0 -version -fvisibility=hidden -o C:\\Users\\sahin\\AppData\\Local\\Temp\\ccDXD6Ux.s
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/lib/gcc/riscv-none-embed/8.2.0/../../../../include"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include-fixed"
+        ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include"
+        ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/usr/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include-fixed
+         c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include
+        End of search list.
+        GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) version 8.2.0 (riscv-none-embed)
+        	compiled by GNU C version 7.4.0, GMP version 6.1.2, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.18-GMP
+        
+        GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096
+        Compiler executable checksum: a667e3ab1205a53ddf50615d0bcac03f
+        COLLECT_GCC_OPTIONS='-march=rv32i' '-mabi=ilp32' '-static' '-mcmodel=medany' '-fvisibility=hidden' '-nostdlib' '-nostartfiles' '-g' '-O0' '-v' '-o' 'CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj' '-c'
+         c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/as.exe -v --traditional-format -march=rv32i -mabi=ilp32 -o CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj C:\\Users\\sahin\\AppData\\Local\\Temp\\ccDXD6Ux.s
+        GNU assembler version 2.32 (riscv-none-embed) using BFD version (GNU MCU Eclipse RISC-V Embedded GCC, 64-bit) 2.32
+        COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/
+        LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32i/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32i/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32i/ilp32/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/;c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/;c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/
+        COLLECT_GCC_OPTIONS='-march=rv32i' '-mabi=ilp32' '-static' '-mcmodel=medany' '-fvisibility=hidden' '-nostdlib' '-nostartfiles' '-g' '-O0' '-v' '-o' 'CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj' '-c'
+        Linking C static library libcmTC_3cfa8.a
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_3cfa8.dir\\cmake_clean_target.cmake
+        "C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_3cfa8.dir\\link.txt --verbose=1
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ar.exe qc libcmTC_3cfa8.a CMakeFiles/cmTC_3cfa8.dir/CMakeCCompilerABI.c.obj
+        C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ranlib.exe libcmTC_3cfa8.a
+        mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/include]
+          add: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/include-fixed]
+          add: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include]
+        end of search list found
+        collapse include dir [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/include] ==> [C:/GMD/toolchain/RISC-V_toolchain/lib/gcc/riscv-none-embed/8.2.0/include]
+        collapse include dir [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/include-fixed] ==> [C:/GMD/toolchain/RISC-V_toolchain/lib/gcc/riscv-none-embed/8.2.0/include-fixed]
+        collapse include dir [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include] ==> [C:/GMD/toolchain/RISC-V_toolchain/riscv-none-embed/include]
+        implicit include dirs: [C:/GMD/toolchain/RISC-V_toolchain/lib/gcc/riscv-none-embed/8.2.0/include;C:/GMD/toolchain/RISC-V_toolchain/lib/gcc/riscv-none-embed/8.2.0/include-fixed;C:/GMD/toolchain/RISC-V_toolchain/riscv-none-embed/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "C:/Program Files/CMake/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:5 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(riscv-none-embed-ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9']
+        ignore line: []
+        ignore line: [Run Build Command(s): "C:/Program Files/CMake/bin/cmake.exe" -E env VERBOSE=1 C:/MinGW/bin/mingw32-make.exe -f Makefile cmTC_3cfa8/fast]
+        ignore line: [C:/MinGW/bin/mingw32-make.exe  -f CMakeFiles\\cmTC_3cfa8.dir\\build.make CMakeFiles/cmTC_3cfa8.dir/build]
+        ignore line: [mingw32-make.exe[1]: Entering directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9']
+        ignore line: [Building C object CMakeFiles/cmTC_3cfa8.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe   -march=rv32i -mabi=ilp32 -static -mcmodel=medany -fvisibility=hidden -nostdlib -nostartfiles -g -O0    -v -o CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj -c "C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c"]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe]
+        ignore line: [Target: riscv-none-embed]
+        ignore line: [Configured with: /Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/sources/riscv-none-gcc-8.2.0-2/configure --prefix=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc --infodir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/info --mandir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/man --htmldir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/html --pdfdir=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/doc/pdf --build=x86_64-unknown-linux-gnu --host=x86_64-w64-mingw32 --target=riscv-none-embed --with-pkgversion='GNU MCU Eclipse RISC-V Embedded GCC\\x2C 64-bit' --enable-languages=c,c++ --enable-mingw-wildcard --enable-plugins --enable-lto --disable-decimal-float --disable-libffi --disable-libgomp --disable-libmudflap --disable-libquadmath --disable-libssp --disable-libstdcxx-pch --disable-nls --disable-threads --disable-tls --enable-checking=yes --with-gnu-as --with-gnu-ld --with-newlib --with-headers=yes --with-python-dir=share/gcc-riscv-none-embed --with-sysroot=/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/riscv-none-embed --with-abi=ilp32 --with-arch=rv32imac --disable-rpath --disable-build-format-warnings --with-system-zlib]
+        ignore line: [Thread model: single]
+        ignore line: [gcc version 8.2.0 (GNU MCU Eclipse RISC-V Embedded GCC  64-bit) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32i' '-mabi=ilp32' '-static' '-mcmodel=medany' '-fvisibility=hidden' '-nostdlib' '-nostartfiles' '-g' '-O0' '-v' '-o' 'CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj' '-c']
+        ignore line: [ c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/cc1.exe -quiet -v -imultilib rv32i/ilp32 -iprefix c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/ -isysroot c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed C:\\Program Files\\CMake\\share\\cmake-3.28\\Modules\\CMakeCCompilerABI.c -quiet -dumpbase CMakeCCompilerABI.c -march=rv32i -mabi=ilp32 -mcmodel=medany -auxbase-strip CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj -g -O0 -version -fvisibility=hidden -o C:\\Users\\sahin\\AppData\\Local\\Temp\\ccDXD6Ux.s]
+        ignore line: [GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC  64-bit) version 8.2.0 (riscv-none-embed)]
+        ignore line: [	compiled by GNU C version 7.4.0  GMP version 6.1.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096]
+        ignore line: [ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include"]
+        ignore line: [ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/Host/home/ilg/Work/riscv-none-gcc-8.2.0-2.2/win32-x64/install/riscv-none-gcc/lib/gcc/riscv-none-embed/8.2.0/../../../../include"]
+        ignore line: [ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/include-fixed"]
+        ignore line: [ignoring duplicate directory "c:/gmd/toolchain/risc-v_toolchain/lib/gcc/../../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include"]
+        ignore line: [ignoring nonexistent directory "c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../riscv-none-embed/usr/include"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include]
+        ignore line: [ c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/include-fixed]
+        ignore line: [ c:\\gmd\\toolchain\\risc-v_toolchain\\bin\\../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/include]
+        ignore line: [End of search list.]
+        ignore line: [GNU C17 (GNU MCU Eclipse RISC-V Embedded GCC  64-bit) version 8.2.0 (riscv-none-embed)]
+        ignore line: [	compiled by GNU C version 7.4.0  GMP version 6.1.2  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.18-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=30 --param ggc-min-heapsize=4096]
+        ignore line: [Compiler executable checksum: a667e3ab1205a53ddf50615d0bcac03f]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32i' '-mabi=ilp32' '-static' '-mcmodel=medany' '-fvisibility=hidden' '-nostdlib' '-nostartfiles' '-g' '-O0' '-v' '-o' 'CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj' '-c']
+        ignore line: [ c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/as.exe -v --traditional-format -march=rv32i -mabi=ilp32 -o CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj C:\\Users\\sahin\\AppData\\Local\\Temp\\ccDXD6Ux.s]
+        ignore line: [GNU assembler version 2.32 (riscv-none-embed) using BFD version (GNU MCU Eclipse RISC-V Embedded GCC  64-bit) 2.32]
+        ignore line: [COMPILER_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/riscv-none-embed/8.2.0/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../libexec/gcc/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/bin/]
+        ignore line: [LIBRARY_PATH=c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/rv32i/ilp32/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/rv32i/ilp32/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/rv32i/ilp32/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../lib/gcc/riscv-none-embed/8.2.0/../../../../riscv-none-embed/lib/]
+        ignore line: [c:/gmd/toolchain/risc-v_toolchain/bin/../riscv-none-embed/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-march=rv32i' '-mabi=ilp32' '-static' '-mcmodel=medany' '-fvisibility=hidden' '-nostdlib' '-nostartfiles' '-g' '-O0' '-v' '-o' 'CMakeFiles\\cmTC_3cfa8.dir\\CMakeCCompilerABI.c.obj' '-c']
+        ignore line: [Linking C static library libcmTC_3cfa8.a]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -P CMakeFiles\\cmTC_3cfa8.dir\\cmake_clean_target.cmake]
+        ignore line: ["C:\\Program Files\\CMake\\bin\\cmake.exe" -E cmake_link_script CMakeFiles\\cmTC_3cfa8.dir\\link.txt --verbose=1]
+        ignore line: [C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ar.exe qc libcmTC_3cfa8.a CMakeFiles/cmTC_3cfa8.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-ranlib.exe libcmTC_3cfa8.a]
+        ignore line: [mingw32-make.exe[1]: Leaving directory 'C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/CMakeFiles/CMakeScratch/TryCompile-go40o9']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...
