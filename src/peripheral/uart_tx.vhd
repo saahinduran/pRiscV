@@ -5,7 +5,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity uart_tx is
 generic (
-c_clkfreq		: integer := 27_000_000;
+c_clkfreq		: integer := 13_500_000;
 c_baudrate		: integer := 115_200;
 c_stopbit		: integer := 1
 );

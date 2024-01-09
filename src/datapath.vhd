@@ -33,8 +33,7 @@ signal Alu1In		: std_logic_vector (31 downto 0):= "00000000000000000000000000000
 signal Alu2In		: std_logic_vector (31 downto 0):= "00000000000000000000000000000000"; 
 signal AluControl   : std_logic_vector (2 downto 0) := "000";  
 signal AluOutDataPth       : std_logic_vector (31 downto 0):= x"ffffffff";
---attribute syn_preserve : integer;
---attribute syn_preserve of AluOutDataPth: signal is 1;
+
 
 signal N,Z,C,V		: std_logic := '0';
 signal PcSrc		: std_logic := '0';
@@ -192,7 +191,7 @@ clkdiv: Gowin_CLKDIV
 RegisterFile : register_file 
 port map(
 
-Clk			=>  clk, 
+Clk			=>  clkSlow, 
 Rs1Sel		=>  Instruction(19 downto 15),  
 Rs2Sel		=>  Instruction(24 downto 20),
 RdSel		=>  Instruction(11 downto 7),
@@ -250,7 +249,7 @@ RegWrite     => RegWrite
 
 myPeripherals : peripherals
 port map(
-	Clk			=> clk,
+	Clk			=> clkSlow,
 	Address		=> AluOutDataPth,
 	DataIn		=> MemWriteData,
 	WriteEn		=> MemWrite,
@@ -265,8 +264,8 @@ port map(
 );
 
 
-PC_Process: process(clk) is begin
-if(rising_edge(clk)) then
+PC_Process: process(clkSlow) is begin
+if(rising_edge(clkSlow)) then
 
 
 if (Reset = '0' ) then
@@ -291,37 +290,16 @@ Alu1In <= PC when Instruction(6 downto 0) = "0010111" else
 		  Rs1Out;
 	
 
-
-RESULT_PROCESS: process(ResultSrc, ReadData, PCNext, AluOutDataPth) is
-
-begin
-case ResultSrc is
-	when "0001" | "0011" | "0100" | "0101" | "0110"  => 
-		Result <= ReadData;
-		
-	when "0010" =>
-		Result <= PCNext;
-		
-	when "1000" =>
-		Result <= x"00000001";
-	when "0000" =>
-		Result <= x"00000000";
-	when others =>
-		Result <= AluOutDataPth; 
-
-
-end case;
-end process;
 	
---Result <= ReadData when ResultSrc = "0001" else
---		  PCNext   when ResultSrc = "0010" else
---		  ( (31 downto 8 => ReadData(7)) & ReadData(7 downto 0)) when ResultSrc = "0011" 	else --load byte
---		  ( (31 downto 16 => ReadData(7)) & ReadData(15 downto 0)) when ResultSrc = "0100" 	else -- load halfword
---		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "0101" 			else -- load byte u
---		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "0110" 			else -- load halfword u
---		  ( (31 downto 1 => '0') & '1')  when ResultSrc = "1000" else   -- SLTI,SLT,SLTIU,SLTU satisfied
---		  (  31 downto 0 => '0'  	)  when ResultSrc = "0000" else	-- SLTI,SLT,SLTIU,SLTU not satisfied
---		  AluOutDataPth;
+Result <= ReadData when ResultSrc = "0001" else
+		  PCNext   when ResultSrc = "0010" else
+		  ( (31 downto 8 => ReadData(7)) & ReadData(7 downto 0)) when ResultSrc = "0011" 	else --load byte
+		  ( (31 downto 16 => ReadData(7)) & ReadData(15 downto 0)) when ResultSrc = "0100" 	else -- load halfword
+		  ( (31 downto 8 => '0') & ReadData(7 downto 0)) when ResultSrc = "0101" 			else -- load byte u
+		  ( (31 downto 16 =>'0') & ReadData(15 downto 0)) when ResultSrc = "0110" 			else -- load halfword u
+		  ( (31 downto 1 => '0') & '1')  when ResultSrc = "1000" else   -- SLTI,SLT,SLTIU,SLTU satisfied
+		  (  31 downto 0 => '0'  	)  when ResultSrc = "0000" else	-- SLTI,SLT,SLTIU,SLTU not satisfied
+		  AluOutDataPth;
 		   
 		  
 MemWriteData <= Rs2Out;

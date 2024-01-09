@@ -10,7 +10,7 @@ Linker script and memory map
 
 LOAD main.o
 
-.text           0x0000000000000204       0x7c
+.text           0x0000000000000204      0x12c
                 0x0000000000000204                _start_text = .
                 0x0000000000000204                . = ORIGIN (FLASH)
  *(.init)
@@ -22,16 +22,16 @@ LOAD main.o
  .text          0x000000000000020c       0x60 main.o
                 0x000000000000020c                main
  *(.rodata*)
- .rodata        0x000000000000026c       0x12 main.o
-                0x0000000000000280                . = ALIGN (0x4)
- *fill*         0x000000000000027e        0x2 
-                0x0000000000000280                _end_text = .
-                0x0000000000000280                _stored_data = .
+ .rodata        0x000000000000026c       0xc2 main.o
+                0x0000000000000330                . = ALIGN (0x4)
+ *fill*         0x000000000000032e        0x2 
+                0x0000000000000330                _end_text = .
+                0x0000000000000330                _stored_data = .
 
-.rela.dyn       0x0000000000000280        0x0
- .rela.init     0x0000000000000280        0x0 main.o
+.rela.dyn       0x0000000000000330        0x0
+ .rela.init     0x0000000000000330        0x0 main.o
 
-.data           0x0000000000000000        0x0 load address 0x0000000000000280
+.data           0x0000000000000000        0x0 load address 0x0000000000000330
                 0x0000000000000000                _start_data = .
  *(.data*)
  .data          0x0000000000000000        0x0 main.o
@@ -40,7 +40,7 @@ LOAD main.o
                 0x0000000000000000                . = ALIGN (0x4)
                 0x0000000000000000                _end_data = .
 
-.bss            0x0000000000000000        0x0 load address 0x0000000000000280
+.bss            0x0000000000000000        0x0 load address 0x0000000000000330
                 0x0000000000000000                _start_bss = .
  *(.bss*)
  .bss           0x0000000000000000        0x0 main.o

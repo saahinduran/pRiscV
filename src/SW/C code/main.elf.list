@@ -3,9 +3,9 @@ main.elf:     file format elf32-littleriscv
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
-  0 .text         0000007c  00000204  00000204  00000204  2**2
+  0 .text         0000012c  00000204  00000204  00000204  2**2
                   CONTENTS, ALLOC, LOAD, READONLY, CODE
-  1 .data         00000000  00000000  00000280  00001000  2**0
+  1 .data         00000000  00000000  00000330  00001000  2**0
                   CONTENTS, ALLOC, LOAD, DATA
   2 .bss          00000000  00000000  00000000  00001000  2**0
                   ALLOC
@@ -45,9 +45,12 @@ int main()
  20c:	fe010113          	addi	sp,sp,-32
  210:	00812e23          	sw	s0,28(sp)
  214:	02010413          	addi	s0,sp,32
-   const char *msg = "Hello from pRiscV";
+   const char *msg = 
  218:	26c00793          	li	a5,620
  21c:	fef42623          	sw	a5,-20(s0)
+        " | |_) |  _ <| \\__ \\ (__ \\ V / \n"
+        " | .__/|_| \\_\\_|___/\\___| \\_/  \n"
+        " |_|                           \n\0";
 
   // Enable TX
 	*(uint32_t *) UART_CTRL_REG_ADDR = 1;
@@ -85,10 +88,63 @@ int main()
 
   while(1);
  268:	0000006f          	j	268 <main+0x5c>
- 26c:	6548                	flw	fa0,12(a0)
- 26e:	6c6c                	flw	fa1,92(s0)
- 270:	7266206f          	j	62996 <_end_text+0x62716>
- 274:	70206d6f          	jal	s10,6976 <_end_text+0x66f6>
- 278:	6952                	flw	fs2,20(sp)
- 27a:	00566373          	csrrsi	t1,utvec,12
+ 26c:	2020                	fld	fs0,64(s0)
+ 26e:	2020                	fld	fs0,64(s0)
+ 270:	2020                	fld	fs0,64(s0)
+ 272:	2020                	fld	fs0,64(s0)
+ 274:	5f5f 5f5f 2020      	0x20205f5f5f5f
+ 27a:	205f 2020 2020      	0x20202020205f
+ 280:	2020                	fld	fs0,64(s0)
+ 282:	2020                	fld	fs0,64(s0)
+ 284:	2020                	fld	fs0,64(s0)
+ 286:	2020                	fld	fs0,64(s0)
+ 288:	2020                	fld	fs0,64(s0)
+ 28a:	0a20                	addi	s0,sp,280
+ 28c:	2020                	fld	fs0,64(s0)
+ 28e:	205f 5f5f 7c20      	0x7c205f5f205f
+ 294:	2020                	fld	fs0,64(s0)
+ 296:	205f 285c 295f      	0x295f285c205f
+ 29c:	5f5f 205f 5f20      	0x5f20205f5f5f
+ 2a2:	5f5f 5f5f 2020      	0x20205f5f5f5f
+ 2a8:	5f20                	lw	s0,120(a4)
+ 2aa:	0a5f 7c20 2720      	0x27207c200a5f
+ 2b0:	205f 7c5c 7c20      	0x7c207c5c205f
+ 2b6:	295f 7c20 2f20      	0x2f207c20295f
+ 2bc:	5f20                	lw	s0,120(a4)
+ 2be:	7c5f 202f 5f5f      	0x5f5f202f7c5f
+ 2c4:	205c                	fld	fa5,128(s0)
+ 2c6:	205c                	fld	fa5,128(s0)
+ 2c8:	0a2f202f          	amoswap.w.rl	zero,sp,(t5)
+ 2cc:	7c20                	flw	fs0,120(s0)
+ 2ce:	7c20                	flw	fs0,120(s0)
+ 2d0:	295f 7c20 2020      	0x20207c20295f
+ 2d6:	205f 7c3c 5c20      	0x5c207c3c205f
+ 2dc:	5f5f 5c20 2820      	0x28205c205f5f
+ 2e2:	5f5f 5c20 5620      	0x56205c205f5f
+ 2e8:	2f20                	fld	fs0,88(a4)
+ 2ea:	0a20                	addi	s0,sp,280
+ 2ec:	7c20                	flw	fs0,120(s0)
+ 2ee:	2e20                	fld	fs0,88(a2)
+ 2f0:	5f5f 7c2f 7c5f      	0x7c5f7c2f5f5f
+ 2f6:	5c20                	lw	s0,120(s0)
+ 2f8:	5c5f 7c5f 5f5f      	0x5f5f7c5f5c5f
+ 2fe:	2f5f 5f5c 5f5f      	0x5f5f5f5c2f5f
+ 304:	207c                	fld	fa5,192(s0)
+ 306:	5f5c                	lw	a5,60(a4)
+ 308:	0a20202f          	amoswap.w.rl	zero,sp,(zero)
+ 30c:	7c20                	flw	fs0,120(s0)
+ 30e:	7c5f 2020 2020      	0x202020207c5f
+ 314:	2020                	fld	fs0,64(s0)
+ 316:	2020                	fld	fs0,64(s0)
+ 318:	2020                	fld	fs0,64(s0)
+ 31a:	2020                	fld	fs0,64(s0)
+ 31c:	2020                	fld	fs0,64(s0)
+ 31e:	2020                	fld	fs0,64(s0)
+ 320:	2020                	fld	fs0,64(s0)
+ 322:	2020                	fld	fs0,64(s0)
+ 324:	2020                	fld	fs0,64(s0)
+ 326:	2020                	fld	fs0,64(s0)
+ 328:	2020                	fld	fs0,64(s0)
+ 32a:	0a20                	addi	s0,sp,280
+ 32c:	0000                	unimp
 	...

@@ -4,7 +4,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity UART_TOP is
 generic (
-c_clkfreq		: integer := 27_000_000;
+c_clkfreq		: integer := 13_500_000;
 c_baudrate		: integer := 115_200
 );
 port (
@@ -30,7 +30,7 @@ signal state : STATE_TYPE := IDLE;
 
 component uart_tx is
 generic (
-c_clkfreq		: integer := 27_000_000;
+c_clkfreq		: integer := 13_500_000;
 c_baudrate		: integer := 115_200;
 c_stopbit		: integer := 1
 );
@@ -54,7 +54,7 @@ begin
 
 my_uart_tx : uart_tx
 generic map(
-c_clkfreq		=> 27_000_000,
+c_clkfreq		=> 13_500_000,
 c_baudrate		=> 115_200,
 c_stopbit		=> 1
 )
@@ -82,7 +82,7 @@ case state is
 		if(xFerCplt = '1') then
 			statusReg(0) <= '1';
 			startFlag <= '0';
-			statusReg(1) <= '0';
+			statusReg(7 downto 1) <= (7 downto 1 => '0'); -- tx complete
 			state <= IDLE;
 		end if;
 		startFlag <= '0';

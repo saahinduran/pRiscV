@@ -9,7 +9,7 @@ entity ALU is
     port (
     Rs1, Rs2   : in  std_logic_vector (31 downto 0) := "00000000000000000000000000000000";  
     AluControl : in  std_logic_vector (2 downto 0) := "000";  
-    AluOut     : out std_logic_vector (31 downto 0) := x"FEADBEEF"; 
+    AluOut     : out std_logic_vector (31 downto 0) := x"DEADBEEF"; 
     N,Z,C,V    : out std_logic       := '0'
     );
 end ALU; 

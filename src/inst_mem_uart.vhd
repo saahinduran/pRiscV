@@ -5,8 +5,8 @@ use ieee.std_logic_unsigned.all;
 
 entity instruction_memory is
 	port(
-			 --INPUTS: --program counter must be wired to this port !
-			AddrIn		: in std_logic_vector(31 downto 0);
+			 --INPUTS: 
+			AddrIn		: in std_logic_vector(31 downto 0); --program counter must be wired to this port !
 			RomReadAddr : in std_logic_vector(31 downto 0);
 			ByteEn 		: in std_logic_vector(1 downto 0);
 
@@ -22,13 +22,46 @@ architecture inst_mem of instruction_memory is
 signal readROMInterim : std_logic_vector(31 downto 0);
 signal byteAlignedAddr : integer := 0;
 signal instructionIndex : integer := 0;
-type INST_ARRAY is array (0 to 127 ) of std_logic_vector (7 downto 0);
+type INST_ARRAY is array (0 to 1024 ) of std_logic_vector (7 downto 0);
 signal instMem :INST_ARRAY :=(x"13", x"00", x"00", x"00",
 
-x"13", x"00", x"00", x"00", x"93", x"02", x"b0", x"0b", x"23", x"20",
-x"50", x"00", x"93", x"01", x"00", x"10", x"13", x"01", x"10", x"00",
-x"23", x"a0", x"21", x"00", x"93", x"02", x"80", x"10", x"03", x"22",
-x"00", x"00", x"23", x"a0", x"42", x"00", x"63", x"00", x"00", x"00",
+x"13", x"01", x"00", x"04", x"13", x"00", x"00", x"00", x"13", x"01",
+x"01", x"fe", x"23", x"2e", x"81", x"00", x"13", x"04", x"01", x"02",
+x"93", x"07", x"c0", x"26", x"23", x"26", x"f4", x"fe", x"93", x"07",
+x"00", x"10", x"13", x"07", x"10", x"00", x"23", x"a0", x"e7", x"00",
+x"83", x"27", x"c4", x"fe", x"03", x"c7", x"07", x"00", x"93", x"07",
+x"80", x"10", x"23", x"a0", x"e7", x"00", x"13", x"00", x"00", x"00",
+x"93", x"07", x"40", x"10", x"83", x"a7", x"07", x"00", x"93", x"f7",
+x"27", x"00", x"e3", x"9a", x"07", x"fe", x"83", x"27", x"c4", x"fe",
+x"93", x"87", x"17", x"00", x"23", x"26", x"f4", x"fe", x"83", x"27",
+x"c4", x"fe", x"83", x"c7", x"07", x"00", x"e3", x"94", x"07", x"fc",
+x"6f", x"00", x"00", x"00", x"20", x"20", x"20", x"20", x"20", x"20",
+x"20", x"20", x"5f", x"5f", x"5f", x"5f", x"20", x"20", x"5f", x"20",
+x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20",
+x"20", x"20", x"20", x"20", x"20", x"0a", x"20", x"20", x"5f", x"20",
+x"5f", x"5f", x"20", x"7c", x"20", x"20", x"5f", x"20", x"5c", x"28",
+x"5f", x"29", x"5f", x"5f", x"5f", x"20", x"20", x"5f", x"5f", x"5f",
+x"5f", x"5f", x"20", x"20", x"20", x"5f", x"5f", x"0a", x"20", x"7c",
+x"20", x"27", x"5f", x"20", x"5c", x"7c", x"20", x"7c", x"5f", x"29",
+x"20", x"7c", x"20", x"2f", x"20", x"5f", x"5f", x"7c", x"2f", x"20",
+x"5f", x"5f", x"5c", x"20", x"5c", x"20", x"2f", x"20", x"2f", x"0a",
+x"20", x"7c", x"20", x"7c", x"5f", x"29", x"20", x"7c", x"20", x"20",
+x"5f", x"20", x"3c", x"7c", x"20", x"5c", x"5f", x"5f", x"20", x"5c",
+x"20", x"28", x"5f", x"5f", x"20", x"5c", x"20", x"56", x"20", x"2f",
+x"20", x"0a", x"20", x"7c", x"20", x"2e", x"5f", x"5f", x"2f", x"7c",
+x"5f", x"7c", x"20", x"5c", x"5f", x"5c", x"5f", x"7c", x"5f", x"5f",
+x"5f", x"2f", x"5c", x"5f", x"5f", x"5f", x"7c", x"20", x"5c", x"5f",
+x"2f", x"20", x"20", x"0a", x"20", x"7c", x"5f", x"7c", x"20", x"20",
+x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20",
+x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20", x"20",
+x"20", x"20", x"20", x"20", x"20", x"0a", x"00", x"00", x"00", x"00",
+
+
+
+
+
+
+
 
 
 
@@ -44,18 +77,8 @@ instructionIndex <=  to_integer(unsigned(AddrIn ) ) ;
 byteAlignedAddr <=  to_integer(unsigned(RomReadAddr ) ); 
 
 
---byteAlignedAddr <= ( (to_integer(unsigned(RomReadAddr ) ) -512 )  );
---readROMInterim <= instMem(byteAlignedAddr +3) & instMem(byteAlignedAddr +2) & instMem(byteAlignedAddr +1) & instMem(byteAlignedAddr );
+InstOut <= instMem( instructionIndex + 3) & instMem(instructionIndex + 2) & instMem(instructionIndex + 1) & instMem(instructionIndex);
 
---process(instructionIndex,instMem) is begin 
---	if(instructionIndex >= 0 and instructionIndex  <= 83) then
-		InstOut <= instMem( instructionIndex + 3) & instMem(instructionIndex + 2) & instMem(instructionIndex + 1) & instMem(instructionIndex);
---	else
---		InstOut <= x"FFFFFFFF";
---	end if;
-
-
---end process;
 
 
 ROM_READ_PROCESS: process (RomReadAddr, instMem, ByteEn, byteAlignedAddr) is begin
@@ -64,61 +87,12 @@ ROM_READ_PROCESS: process (RomReadAddr, instMem, ByteEn, byteAlignedAddr) is beg
 		RomReadData <= (31 downto 8 => '0') & instMem(byteAlignedAddr);
 	elsif (ByteEn = "01") then
 		RomReadData <= (31 downto 16 => '0') & instMem(byteAlignedAddr +1) & instMem(byteAlignedAddr);
-	elsif (ByteEn = "10") then
-		RomReadData <= instMem(byteAlignedAddr +3) & instMem(byteAlignedAddr +2) & instMem(byteAlignedAddr +1) & instMem(byteAlignedAddr +0);
 	else
-		RomReadData <= x"DEADC0DE";
+		RomReadData <= instMem(byteAlignedAddr +3) & instMem(byteAlignedAddr +2) & instMem(byteAlignedAddr +1) & instMem(byteAlignedAddr +0);
 	end if;
 
 
---	case to_integer(unsigned(RomReadAddr ) ) mod 4 is
---	
---		when 0 =>
---			if(ByteEn = "00") then
---				RomReadData <= (31 downto 8 => '0') & instMem(byteAlignedAddr)(7 downto 0);
---			elsif(ByteEn = "01" ) then
---				RomReadData <= (31 downto 16 => '0') & instMem(byteAlignedAddr)(15 downto 0);
---			else
---				RomReadData <= instMem(byteAlignedAddr);
---			end if;
---		when 1 =>
---			if(ByteEn = "00") then
---				RomReadData <= (31 downto 8 => '0') & instMem(byteAlignedAddr)(15 downto 8);
---			elsif(ByteEn = "01" ) then
---				RomReadData <= (31 downto 16 => '0') & instMem(byteAlignedAddr)(23 downto 8);
---			else
---				RomReadData <= instMem(byteAlignedAddr)(31 downto 8) & instMem(byteAlignedAddr + 1)(7 downto 0);
---			end if;		
---		
---		
---		when 2 =>
---			if(ByteEn = "00") then
---				RomReadData <= (31 downto 8 => '0') & instMem(byteAlignedAddr)(23 downto 16);
---			elsif(ByteEn = "01" ) then
---				RomReadData <= (31 downto 16 => '0') & instMem(byteAlignedAddr)(31 downto 16);
---			else
---				RomReadData <= instMem(byteAlignedAddr)(31 downto 16) & instMem(byteAlignedAddr + 1)(15 downto 0);
---			end if;
---		when 3 =>
---			if(ByteEn = "00") then
---				RomReadData <= (31 downto 8 => '0') & instMem(byteAlignedAddr)(31 downto 24);
---			elsif(ByteEn = "01" ) then
---				RomReadData <= (31 downto 16 => '0') & instMem(byteAlignedAddr)(15 downto 0);
---			else
---				RomReadData <= instMem(byteAlignedAddr)(31 downto 24) & instMem(byteAlignedAddr + 1)(23 downto 0);
---			end if;
---		
---		when others =>
---			RomReadData <= x"FFFFFFFF";
---
---
---    end case;
-
 end process;
 
---RomReadData <= (31 downto 8 => '0') & instMem(byteAlignedAddr)(7 downto 0) when to_integer(unsigned(RomReadAddr(5 downto 0) ) ) mod 4 = 0 else
---			   (31 downto 8 => '0') & instMem(byteAlignedAddr)(15 downto 8) when to_integer(unsigned(RomReadAddr(5 downto 0) ) ) mod 4 = 1 else
---			   (31 downto 8 => '0') & instMem(byteAlignedAddr)(23 downto 16) when to_integer(unsigned(RomReadAddr(5 downto 0) ) ) mod 4 = 2 else
---			   (31 downto 8 => '0') & instMem(byteAlignedAddr)(31 downto 24) when to_integer(unsigned(RomReadAddr(5 downto 0) ) ) mod 4 = 3 else
---				x"DEADBEEF";
+
 end inst_mem;

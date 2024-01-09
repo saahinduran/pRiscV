@@ -18,36 +18,10 @@ end sign_extender;
 
 architecture signextend of sign_extender is 
 
--- ImmSrc	   <= "000" when OpCode = LUI_TYPE or OpCode = AUIPC_TYPE  else  --Each ImmSrc means different immediate extending.
-			  -- "001" when OpCode = JAL_TYPE 						   else
-			  -- "010" when OpCode = JALR_TYPE or OpCode = LOAD_TYPE
-								  -- or OpCode = I_TYPE  			   else
-			  -- "011" when OpCode = B_TYPE 						   else
-			  -- "100" when OpCode = STORE_TYPE 				       else
-              -- "111" ; --Default value
-
 
 begin
 
---ImmOut <= ImmIn(31 downto 12) & "000000000000" when ImmSrc = "000" else    -- "000" when OpCode = LUI_TYPE or OpCode = AUIPC_TYPE
 
-	--	  ImmIn(31) & ImmIn(19 downto 12) & ImmIn(20) 
-	--	  & ImmIn(30 downto 21) & "000000000000" when ImmSrc = "001" else  -- "001" when OpCode = JAL_TYPE
-		  	 
-	--	  ImmIn(31) & ImmIn(7) & ImmIn(30 downto 25)					   -- "011" when OpCode = B_TYPE 	
---		  & ImmIn(11 downto 8) & "00000000000000000000"  when ImmSrc = "011" else  
-		  
---		  ImmIn(31) & "11111111111111111111" & ImmIn(30 downto 25)         -- "100" when OpCode = STORE_TYPE 
---		  & ImmIn(11 downto 7)  when ImmSrc = "100" else	 
-		 
---		 ImmIn(31) &ImmIn(31) &ImmIn(31)  &          -- "101" when OpCode = LOAD_TYPE or OpCode = I_TYPE or OpCode = JALR_TYPE 
---		  when ImmSrc = "101" or ImmSrc = "010" else
- 		  
-		  
-		  
-		  
---		  "00000000000000000000000000000000";
-		  
 
 
 process (ImmSrc,ImmIn) 	is begin

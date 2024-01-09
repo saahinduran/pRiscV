@@ -10,7 +10,13 @@ void __attribute__((section(".init"),naked)) _start(void) {
 }
 int main()
 {
-   const char *msg = "Hello from pRiscV";
+   const char *msg = 
+        "        ____  _                \n"
+        "  _ __ |  _ \\(_)___  _____   __\n"
+        " | '_ \\| |_) | / __|/ __\\ \\ / /\n"
+        " | |_) |  _ <| \\__ \\ (__ \\ V / \n"
+        " | .__/|_| \\_\\_|___/\\___| \\_/  \n"
+        " |_|                           \n\0";
 
   // Enable TX
 	*(uint32_t *) UART_CTRL_REG_ADDR = 1;

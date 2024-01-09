@@ -2,6 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
+use work.all;
 
 entity peripherals is
 
@@ -10,7 +11,7 @@ port(
 	Address		: in std_logic_vector(31 downto 0):= x"00000000";	
 	DataIn		: in std_logic_vector(31 downto 0);
 	WriteEn		: in std_logic;
-	AddrIn		: in std_logic_vector(31 downto 0); -- PC ADDRESS / ROM ADDRESS 
+	AddrIn		: in std_logic_vector(31 downto 0); -- PC ADDRESS
     ByteEn      : in std_logic_vector(1 downto 0);
 
 
@@ -73,8 +74,8 @@ end component;
 
 component instruction_memory is
 	port(
-			 --INPUTS: --program counter must be wired to this port !
-			AddrIn		: in std_logic_vector(31 downto 0);
+			 --INPUTS: 
+			AddrIn		: in std_logic_vector(31 downto 0); --program counter must be wired to this port !
 			RomReadAddr : in std_logic_vector(31 downto 0);
 			ByteEn 		: in std_logic_vector(1 downto 0);
 
@@ -123,32 +124,16 @@ InstOut		=> InstOut
 );
 
 
---READ_SELECTION_PROCESS : process (Address) is
---
---begin
---	if (Address >= x"0000_0000") and (Address <= x"0000_0040") then
---		ReadData <= readDataInterim;
---
---	elsif (Address >= x"0000_0100") and (Address <= x"0000_0108") then
---		ReadData <= (31 downto 12 => '0') & "0000" & uartReadDataInterim(7 downto 0);	
---		
---	elsif (Address >= x"0000_0200") and (Address <= x"0000_0300") then
---		ReadData <= RomReadData;
---		
---	else
---		ReadData <= x"DEADC0ab";
---	end if;
---
---end process;
 
+-- Read Data Selection Logic --
 ReadData <= readDataInterim when (Address <= x"0000_0040") and (Address >= x"0000_0000") else
 		   (31 downto 12 => '0') & "0000" & uartReadDataInterim(7 downto 0) when (Address >= x"0000_0100") and (Address <= x"0000_0108") else
-			RomReadData when (Address >= x"0000_0200") and (Address <= x"0000_0300") else
-			x"DEADC0ab";
+			RomReadData when (Address >= x"0000_0200") and (Address <= x"0000_0400") else
+			x"DEADC0DE";
 
 
 
-SWITCH_PROCESS : process (Address) is
+SWITCH_PROCESS : process (Address, WriteEn) is
 begin
 	if( Address < x"0000_0100" and WriteEn = '1') then 
 		ramWriteEn <= '1';
@@ -159,27 +144,25 @@ begin
 end process;
 
 
-			
+-- This block is necessary to get rid of synthesizer optimization due to memory blocks' sizes--		
 BASE_ADDRESS_PROCESS : process(Address) is
 begin
 
-	if ( Address(31 downto 9) = (22 downto 1 =>'0') & '1' )   then  
+	if ( (Address >= x"0000_0200") and (Address <= x"0000_0400") )   then  
 		RomReadAddrInterim <= (31 downto 9 => '0') & Address(8 downto 0);
-		--RomReadAddrInterim <= Address;
 	else
 		RomReadAddrInterim <= x"00000000";
 	end if;
 
 	if( Address(31 downto 8) = (23 downto 1 =>'0')  ) then
 		RamReadAddr <= (31 downto 7 => '0') & Address(6 downto 0);
-		--RamReadAddr <= Address;
+
 	else
 		RamReadAddr <= x"00000000";
 	end if;
 		
 	if( Address(31 downto 8) = (23 downto 1 =>'0') & '1' ) then
 		uartAddressInterim <= (31 downto 12 => '0') & Address(11 downto 0);
-		--uartAddressInterim <=  Address;
 	else
 		uartAddressInterim <=  x"00000000";
 	end if;	
