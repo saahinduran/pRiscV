@@ -18,3 +18,6 @@ src/inst_mem.vhd
 src/inst_mem_led.vhd
 src/latchdeneme.vhd
 data_mem_yedek.vhd
+src/data_mem_new.vhd
+src/inst_mem_new_led.vhd
+src/register_file_latch.vhd
