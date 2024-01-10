@@ -1,8 +1,0 @@
-[
-{
-  "directory": "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/uartCode",
-  "command": "C:\\GMD\\toolchain\\RISC-V_toolchain\\bin\\riscv-none-embed-gcc.exe  -IC:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\uartCode\\..\\include -g  -nostdlib -ffunction-sections  -march=rv32i -o CMakeFiles\\main.elf.dir\\main.c.obj -c C:\\Users\\sahin\\Documents\\FPGA\\my_riscv2\\src\\SW\\uartCode\\main.c",
-  "file": "C:/Users/sahin/Documents/FPGA/my_riscv2/src/SW/uartCode/main.c",
-  "output": "CMakeFiles/main.elf.dir/main.c.obj"
-}
-]

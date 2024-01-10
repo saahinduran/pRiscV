@@ -1,1 +1,0 @@
-C:\GMD\toolchain\RISC-V_toolchain\bin\riscv-none-embed-gcc.exe -g  -nostdlib -ffunction-sections  -march=rv32i  -nostdlib  -march=rv32i -Xlinker --defsym=__stack_size=0x40 -T linker.ld -Wl,-Map=main.map CMakeFiles/main.elf.dir/main.c.obj -o main.elf 
