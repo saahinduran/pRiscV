@@ -1,3 +1,6 @@
+Read my Medium article on how I built this CPU!
+https://medium.com/@sahin.duran.9275/building-a-single-cycle-rv32i-cpu-5c873cad1981
+
 Addition to version1 (not in version1 branch, the one in main branch),
 
 1- Memory controller is added. Memory accesses from 0x100 to 0x108 is redirected to UART peripherals.
